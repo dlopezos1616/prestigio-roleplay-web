@@ -1,0 +1,217 @@
+
+--- Página 1 ---
+NORMATIVA
+GENERAL
+GENERAL
+Aquí encontrarás la
+normativa General, la
+que te guiara para una
+mejor experiencia..
+
+--- Página 2 ---
+Metagaming (MG): El MG se produce cuando se usa cualquier tipo de
+información de fuera del juego dentro del juego, sea de forma
+intencionada o por error para obtener beneficio. Se considera MG
+estar en streams de usuarios de Clandestino V2 al mismo tiempo que
+estar roleando dentro del servidor. Está prohibido y conlleva una
+sanción.
+Powergaming (PG): El PG es la ejecución de actos que en la vida real
+te resultaría imposible de hacer. También se considera PG realizar
+acciones sin dar oportunidad a que otro usuario reaccione a estas.
+Deathmatch (DM): El DM es la agresión a un personaje o muerte del
+mismo sin un motivo convincente o de paso, además de no dar opción
+a reacción ninguna.
+Vehicle Deathmatch (VDM): El VDM es el uso de cualquier vehículo
+para atropellar a otros personajes. Está completamente prohibido,
+salvo que sea la única forma de huida de un conflicto ya generado.
+Player Kill (PK): Un PK es cuando nuestro personaje queda abatido y
+tiempo después recupera la consciencia. Se deben rolear las heridas
+correspondientes que le llevaron a esa situación y preservar la
+memoria de lo ocurrido. El PKT no existe en el servidor, por lo que no
+se puede hacer, únicamente se puede realizar PK y el afectado se
+acordará de todo o es CK aprobado por administración. El hecho de
+realizar un PKT a alguien se considerará motivo para realizar una Re-
+Whitelist.
+
+--- Página 3 ---
+Character Kill (CK): Un CK es la muerte definitiva y permanente de un
+personaje. Está completamente prohibido transferir cualquier tipo de bienes,
+objetos y/o dinero de manera premeditada o posterior al CK. A la hora de
+solicitar un CK premeditado, deberás de abrir el ticket de dicho CK
+previamente y la administración deberá aprobarlo para que puedas ejecutar el
+CK, sin este aprobado no podrá realizarse. En el caso de que el CK, no esté
+premeditado o aceptado, no podrás forzar al usuario con roles drásticos como
+por ejemplo vaciar cargadores de munición sobre él, lanzarle desde alturas
+muy elevadas, o cualquier rol que por lógica implicaría la muerte de cualquier
+persona. Estos roles pueden hacerse únicamente cuando el ticket de CK está
+ya aprobado. Cuando se dé un rol que pueda conllevar un CK no premeditado,
+se deberá de rolear la herida pertinente en el conflicto, hasta qué
+administración de luz verde al CK. En el momento que administración de luz
+verde al CK, deberás de notificar al usuario, que continúe con el rol de su
+muerte, así sea por la herida sufrida, infección o cualquier otra cosa. Si de lo
+contrario la administración no da luz verde, deberás de notificar al usuario,
+que rolee la recuperación de la herida del mismo. Otra opción es no rolear la
+herida con gravedad, pero si es CK, pues tendrá que darse el rol de muerte
+con los implicados de nuevo. (SIN EVADIR ROL) Podréis elegir, pero por favor
+para evitar malos entendidos si es un CK con premeditación, abrid ticket
+antes de realizarlo, ahorra muchos dolores de cabeza en la jugabilidad de
+ambas partes.
+Revenge Kill (RK): El RK ocurre cuando nuestro personaje toma venganza
+sobre quién le ha provocado un PK sin ningún tipo de rol previo ni
+interpretación coherente de las heridas recibidas.
+AFK: Está prohibido quedarse AFK dentro del servidor. Si necesitas ausentarte
+por poco tiempo para algo podrás siempre y cuando no estés en zonas donde
+sea concurrida o pueda alguien iniciarse un rol.
+In Character (IC): Se refiere a todo aquello que ocurre a manos de nuestro
+personaje o en el entorno de la isla de LOS SANTOS, es decir, dentro del
+servidor del juego.
+
+--- Página 4 ---
+Out of Character (OOC): Se refiere a todo lo que acontece de forma ajena
+a nuestro personaje o en el entorno de la isla de LOS SANTOS, es decir,
+fuera del juego.
+Rol de Entorno (RdE): El rol de entorno es todo aquello que no podemos
+ver OOC, pero se interpreta como el propio entorno NPC de la ciudad, si
+bien están los jugadores virtuales, la ciudad tiene miles de habitantes, a los
+cuales no se les puede ignorar, ya que a la hora de rolear forman parte
+fundamental del mismo, ya que son ellos quienes interactúan de forma
+directa con los jugadores y todas las actividades que desempeñen, sobre
+todo las actividades ilícitas.
+Valoración de vida: Es la prioridad que le damos a la vida de nuestro
+personaje ante cualquier situación. Se puede no valorar la vida propia
+priorizando la interpretación, ateniéndose eso sí a las consecuencias
+oportunas de dicho acto. (ESTO NO ES REPORTABLE, SI NO ES MOTIVO DE
+CK)
+Valoración de vida a terceros: Si un personaje no valora la vida de un
+tercero con el cual tenga un vínculo afectivo sólido (amigo, hermano,
+compañero de facción, pareja, familiar, etcétera) puede ser sancionado el
+usuario que no hace la valoración de vida dependiendo si la IDP
+(interpretación de personaje) de su personaje justifica o no la ausencia de
+ayuda hacia el tercero en cuestión.
+Nombre de personaje: No se podrán usar nombres de
+famosos/personajes o aquellos con fin de hacer gracia. Está prohibida la
+utilización de nombres con caracteres no alfanuméricos. No se podrá usar
+personajes tras un CK, que estén enlazados al anterior pj, ya sea primo,
+hermano, familiar, pareja, etc. con la información del anterior PJ para así
+poder tener un rol de venganza o hacer MG.
+
+--- Página 5 ---
+/me <texto>: Comando que se utiliza generalmente en tercera persona para
+indicar las acciones que realiza nuestro personaje; /me intenta quitarle la caja de
+las manos a la mujer.
+/do <texto>: Comando que sirve para aclarar y describir el entorno inmediato de
+nuestro personaje; /do Se puede apreciar que el hombre lleva el brazo izquierdo
+vendado. También se utiliza para continuar las interacciones con otro jugador;
+/do ¿Podría quitarle la caja de las manos a la mujer? No está permitido expresar
+sentimientos, emociones ni pensamientos en los /do <texto>.
+/entorno <texto>: Comando utilizado para describir de la manera más detallada
+posible cualquier situación en la que la policía debiese ser avisada. Los entornos
+deben ser enviados antes de la acción siempre y cuando sea premeditada.
+/auxilio <texto>: Comando utilizado para una situación en la que caigas PK y
+necesites asistencia médica.
+/forzar: Comando utilizado para avisar a las autoridades que se está efectuando
+un robo de vehículo. Debe ser usado siempre que se robe un vehículo ajeno de
+NPC o importación, además del correspondiente /entorno.
+/dado: Comando utilizado para determinar si una acción de nuestro personaje
+tiene un resultado favorable o desfavorable. Por ejemplo: /me Intenta agarrarse
+al borde del muro y saltar al otro lado. /dado ¡Tienes mala suerte y te sale mal!
+(Uso opcional). /dados: Comando utilizado para generar un número entre 1 y 6.
+Puede utilizarse para diversos roles, como por ejemplo juegos de cartas o dados
+entre personajes. (Uso opcional).
+/pedirid: Su uso es exclusivo para la descripción de una persona o de la acción
+que realiza esta persona y para nombres en concreto que necesitemos contactar
+con ellos.
+Uso correcto del Pedir ID: /pedirid De la persona que acaba de irse en moto en a
+lado de gym /pedirid xxxx.
+Uso indebido del Pedir ID: /pedirid Princesa el amor de mi vida / Algún admin /
+Policía disponible.
+
+--- Página 6 ---
+(PEDIR EL ID SIEMPRE Y CUANDO EL ROL SER HAYA FINALIZADO,
+NUNCA DURANTE EL ROL)
+Uso del CHAT OOC: El uso de chat occ debe ser el mínimo, ya sea para
+cosas puntuales, pero nunca para una conversación ni mucho menos en
+mitad de un rol, el mal uso de ello será sancionado
+FALTAS DE RESPETO: Las faltas de respeto OOC no están permitidas y son
+sancionables. La falta de respeto IC está permitida dentro de un sentido
+común en cada rol individual. Deberás atenerte a las consecuencias de tus
+actos.
+/Report: Al ocurrir algo que sea reportarle, usad el comando /report in game
+Al enviar un /report, especificad lo ocurrido. Cualquier reclamación de
+inventario no será atendida si no hay pruebas (videos mostrando la
+pérdida).
+ROPA: Es importante hacer uso de una ropa que represente la IDP de
+nuestro PJ. Sin embargo, queda totalmente prohibido:
+Utilizar ropa de la tienda que te haga invisible o que deje partes de tu
+cuerpo invisibles.
+Utilizar la ropa "default" (con la que apareces por primera vez).
+Hacer uso de ropa que claramente tanquea o da ventajas en tiroteos
+cuando vayamos a tener este tipo de roles. Solo estará permitido llevar
+en actos delictivos/robos/secuestros, etc., BANDANAS en el rostro.
+Ningún otro tipo de objeto. (Ya sea máscaras, cascos, etc.)
+Hacer uso de ropa que pertenezca a alguna facción IC, como la policía,
+moteros, EMS, seguridad, etc. si no pertenecemos a la misma.
+Podrás vestir el color que quieras siempre y cuando no uséis prendas
+que sean identificativas de una banda, tales como: BANDANAS,
+PAÑUELOS, CHUPAS DE MOTERO, … Estas serán exclusivas para bandas
+oficiales.
+
+--- Página 7 ---
+Puntos Importantes
+Un /entorno nunca se redacta en 3ª persona.
+Prohibido el uso de mods gráficos para obtener cualquier tipo de ventaja In-
+Game, al igual que los programas externos, puntos de mira, macros, VPN y
+resoluciones que favorezcan el PVP.
+Fotos, grafitis con la IA SON PERMITIDAS siempre y cuando tenga sentido y
+coherencia.
+PROHIBIDOS graffitis realistas en el servidor, el que lo haga se irá
+PERMABAN.
+Prohibido actuar más de 3 PERSONAS en un acto ilegal siendo civil.
+Prohibido subir fotografías o videos IRL en redes sociales IC.
+Se podrá solicitar ítem (Que pertenezcan al campo ilegal; armas, droga,
+etcétera) como moneda de cambio para liberar a un personaje secuestrado,
+siempre que este tenga coherencia y sea más por rol que por farmeo.
+Un personaje ha sufrido un CK que no implique su muerte (por ejemplo, un
+viaje a otra ciudad) puede regresar en el mismo wipe siempre y cuando el
+viaje no sea por escapar de una banda o mafia.
+Un bombero o médico podrá ser secuestrado mientras se encuentra de
+servicio, siempre que se cumpla con la normativa y este secuestro será
+tratado como el secuestro a un policía. Estos actos conllevan graves
+consecuencias IC.
+El sistema de sanciones consta de 3 strikes
+Se pondrá 1 strike por persona y por reporte aceptado donde se cometan
+faltas a la normativa
+Las sanciones por días sin acceso al servidor comenzarán a partir del tercer
+strike y dependiendo de la gravedad serán de 1,3 y 7 días sin acceso.
+El permaban se aplica después de los strikes y de los días sin acceso al
+servidor y si el usuario realiza otra falta a la normativa, puede ser apelable o
+no según la gravedad de sus actos.
+Los usuarios que sean sancionados por uso de Cheats, programas de terceros,
+etc. o tengan alguna relación con hacks, se procederá a la expulsión del servidor,
+permaban, retiro de posibilidad de realizar invitaciones u otras posibilidades,
+valorando cada situación como tal. El equipo administrativo valorará y resolverá
+cada una de estas situaciones, velando siempre por el buen juego y la
+comunidad.
+
+--- Página 8 ---
+Sobre el chat de voz y moduladores
+El chat de voz debe utilizarse en todo momento de forma IC, para interpretar
+nuestro personaje. No está permitido salirse del rol utilizando el chat de voz. El
+chat OOC (texto) se utiliza únicamente para aclaraciones de la situación que
+estemos viviendo en el rol en ese momento. Queda terminantemente
+prohibido utilizar este chat para menospreciar los roles ajenos y/o quejarse.
+Los usuarios que requieran el uso de modulador de voz para llevar a cabo su
+interpretación con su personaje deben ser previamente validados por el staff.
+Para que te aprueben el uso de un modulador deberás abrir un ticket de
+soporte/duda indicando que deseas usar un modulador de voz, se te solicitarán
+pruebas de como te escucharías IC y el STAFF valorará el uso de este mismo.
+Abuso de Bugs
+Las ‘ROLABUG’ están sancionadas en el servidor. Si un usuario levanta las
+manos o demuestra inactividad por un periodo de tiempo después de
+haber realizado la “rola” en señal de aceptar su error y no aprovechar esa
+ventaja, no habrá sanción. La sanción se aplicará con el sistema de
+strikes correspondiente que ya se encuentra vigente en Clandestino
+V2.
+Como se mencionó anteriormente en prohibiciones, el uso de cualquier prenda
+que haga que la salud de tu personaje no sea acorde al daño, será considerado
+un abuso de bug y será sancionado de esa forma.

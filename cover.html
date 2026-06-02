@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<style>
+@page { size: 794px 1123px; margin: 0; }
+html, body { margin: 0; padding: 0; width: 794px; height: 1123px; overflow: hidden; font-family: 'Inter', sans-serif; }
+.cover {
+    width: 794px; height: 1123px; position: relative;
+    background: #faf9f7;
+}
+/* Geometric accent - vertical bar */
+.accent-bar {
+    position: absolute; left: 0; top: 0; width: 8px; height: 100%;
+    background: #1b7896;
+}
+/* Decorative line top */
+.line-top {
+    position: absolute; top: 180px; left: 60px; width: 300px; height: 3px;
+    background: #1b7896;
+}
+/* Decorative line bottom */
+.line-bottom {
+    position: absolute; top: 520px; left: 60px; width: 200px; height: 2px;
+    background: #c8bfa6;
+}
+/* Kicker */
+.kicker {
+    position: absolute; top: 200px; left: 60px;
+    font-size: 14px; font-weight: 400; letter-spacing: 4px; text-transform: uppercase;
+    color: #87857d;
+}
+/* Title */
+.title {
+    position: absolute; top: 240px; left: 60px; width: 680px;
+    font-family: 'Playfair Display', serif;
+    font-size: 48px; font-weight: 900; line-height: 1.15;
+    color: #262522;
+}
+/* Subtitle */
+.subtitle {
+    position: absolute; top: 440px; left: 60px; width: 600px;
+    font-size: 18px; font-weight: 300; line-height: 1.6;
+    color: #625838;
+}
+/* Meta block */
+.meta {
+    position: absolute; bottom: 80px; left: 60px;
+    font-size: 13px; color: #87857d; line-height: 1.8;
+}
+.meta strong { color: #262522; }
+/* Decorative corner element */
+.corner {
+    position: absolute; bottom: 60px; right: 60px;
+    width: 40px; height: 40px;
+    border-right: 3px solid #1b7896;
+    border-bottom: 3px solid #1b7896;
+}
+/* Watermark year */
+.watermark {
+    position: absolute; top: 30px; right: 60px;
+    font-size: 120px; font-weight: 900; color: rgba(27, 120, 150, 0.04);
+    font-family: 'Playfair Display', serif;
+    line-height: 1;
+}
+</style>
+</head>
+<body>
+<div class="cover">
+    <div class="accent-bar"></div>
+    <div class="watermark">2025</div>
+    <div class="line-top"></div>
+    <div class="kicker">Informe de Auditoria Integral</div>
+    <div class="title">Auditoria de<br/>Normativas<br/>Clandestino RP</div>
+    <div class="line-bottom"></div>
+    <div class="subtitle">Analisis completo de duplicidades, contradicciones, errores de redaccion, problemas de interpretacion y ausencias criticas en el corpus normativo del servidor.</div>
+    <div class="meta">
+        <strong>Proyecto:</strong> Clandestino V2 Roleplay<br/>
+        <strong>Fecha:</strong> Junio 2025<br/>
+        <strong>Documentos analizados:</strong> 5 PDFs (43 paginas)<br/>
+        <strong>Incidencias detectadas:</strong> 47
+    </div>
+    <div class="corner"></div>
+</div>
+</body>
+</html>
