@@ -603,6 +603,28 @@
 }
 
 /* ============================================================
+   BOOK MODE STYLES
+   ============================================================ */
+.book-nav-btn:hover:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.book-page-content {
+  animation: bookPageIn 0.3s ease-out;
+}
+
+@keyframes bookPageIn {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================================
    NAVBAR
    ============================================================ */
 .navbar-glass {
