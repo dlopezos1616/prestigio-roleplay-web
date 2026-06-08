@@ -866,6 +866,440 @@ export const normativas: NormativaData[] = [
   },
 
   // ============================================================
+  // NORMATIVA LSPD
+  // ============================================================
+  {
+    id: 'lspd',
+    title: 'Normativa LSPD',
+    shortTitle: 'LSPD',
+    description: 'Reglamento interno del cuerpo de policía. Requisitos, artículos, estados de emergencia, códigos y más.',
+    icon: '👮',
+    color: '#1d4ed8',
+    sections: [
+      {
+        id: 'requisitos-lspd',
+        title: 'Requisitos',
+        icon: '📋',
+        content: [
+          { type: 'info', title: 'Requisitos para ingresar', items: [
+            'Edad mínima de 18 años',
+            'Carecer de antecedentes penales',
+            'Tener en regla licencia de armas y carnet de conducir'
+          ]},
+        ]
+      },
+      {
+        id: 'preambulo-lspd',
+        title: 'Preámbulo',
+        icon: '📖',
+        content: [
+          { type: 'definition', title: 'Misión', text: 'Las fuerzas y cuerpos de seguridad bajo la dependencia del Gobierno y ministerio de justicia, tendrán como misión proteger el libre ejercicio de los derechos y libertades y garantizar la seguridad ciudadana en todo el territorio nacional.' }
+        ]
+      },
+      {
+        id: 'articulos-1-10',
+        title: 'Artículos 1-10',
+        icon: '📝',
+        content: [
+          { type: 'info', title: 'Artículo 1', text: 'Las fuerzas y cuerpos de seguridad tendrán presunción de veracidad si son requeridos ante un juez.' },
+          { type: 'info', title: 'Artículo 2', text: 'El respeto mutuo entre compañeros y hacia civiles debe ser constante.' },
+          { type: 'info', title: 'Artículo 3', text: 'La ropa debe estar acorde a tu rango o a tu asignación.' },
+          { type: 'info', title: 'Artículo 4', text: 'Cuando entras de servicio será la primera prioridad entrar en radio y mantenerse en el canal de "Espera de asignación" hasta que Central te asigne una unidad.' },
+          { type: 'info', title: 'Artículo 5', text: 'Cuando un civil te pide la identificación es obligatorio proporcionarle el número de placa. Si te encuentras en binomio también será necesario proporcionar el nombre de unidad asignada.' },
+          { type: 'info', title: 'Artículo 6', text: 'No se podrá utilizar el armamento policial para tu uso como civil, así como no se podrá sacar de servicio ni venderlo o regalarlo.' },
+          { type: 'warning', title: 'Artículo 7 - Derechos del detenido', text: 'Las personas detenidas tienen que ser informadas de sus derechos antes de proceder con cualquier procedimiento legal. En caso de no leer los derechos, el civil podrá solicitar la Habeas Corpus y tendrá que ser dejado en libertad aunque tendrá que ser registrado y sus cargos se mantendrán. La omisión de respuesta es tomada como la comprensión de los mismos.' },
+          { type: 'info', title: 'Artículo 8 - Central', text: 'Central será el mayor rango de servicio, siempre y cuando exista un agente que sea de rango mínimo Oficial III automáticamente este deberá de ser Central. Si no hay ninguno rango de Oficial III o superior, Central no existirá.' },
+          { type: 'info', title: 'Artículo 9 - Códigos en persecuciones', text: 'Los códigos en las persecuciones no están activados hasta que Central lo permita, el único que está activado es el código-100. Se podrá activar clave pit o clave Robert cuando ponga en riesgo la vida de un agente o de los civiles. Se priorizará siempre la activación de la clave pit. Las claves están contraindicadas en persecuciones a motocicletas.' },
+          { type: 'warning', title: 'Artículo 10 - Corrupción', text: 'La corrupción en el cuerpo está vetada. Solamente en el caso de que se dé información de otro ciudadano por dinero estará permitido pero con el riesgo de ser sancionado/expulsado del cuerpo. Todo lo demás que envuelva corrupción será sancionado directamente por el staff.' },
+        ]
+      },
+      {
+        id: 'articulos-11-20',
+        title: 'Artículos 11-20',
+        icon: '📝',
+        content: [
+          { type: 'forbidden', title: 'Artículo 11', text: 'No podrás quedarte AFK estando en servicio.' },
+          { type: 'forbidden', title: 'Artículo 12', text: 'Los agentes que se queden de servicio para farmear horas teniendo la ficha abierta serán sancionados e incluso expulsados del cuerpo si esto se repite varias veces.' },
+          { type: 'info', title: 'Artículo 13', text: 'Las armas de fuego ilegales están totalmente prohibido su uso una vez requisadas. Se deberán dejar en el apartado "dejar equipamiento" del almacén policial. Además, será necesario poner una nota en la ficha del sujeto informando de lo sucedido.' },
+          { type: 'info', title: 'Artículo 14', text: 'Únicamente se podrán utilizar vehículos asignados al rango correspondiente. No se podrán sacar ni patrullar con ellos excepto que estés en patrulla con un rango superior que te lo permita.' },
+          { type: 'info', title: 'Artículo 15 - Equipamiento del vehículo', text: 'Los vehículos tipo sedan llevarán un máximo de 2 vallas, 2 pinchos y 10 conos. Los vehículos tipo furgón o todoterreno llevarán 4 vallas, 4 pinchos y 20 conos.' },
+          { type: 'info', title: 'Artículo 16', text: 'Ante cualquier actuación dudosa siempre se deberá consultar con un superior que nos indicará qué hacer.' },
+          { type: 'info', title: 'Artículo 17', text: 'Para realizar una actuación no competente se tendrá que pedir permiso a un superior y no podremos tomar decisiones excepto que seamos mayor rango que sargento.' },
+          { type: 'info', title: 'Artículo 18 - Fuerza de actuación', text: 'La fuerza de actuación hacia un civil tendrá que ser con la misma actuación con la que se recibe el ataque. En presencia de armas de fuego se intentará reducir sin utilizar la fuerza letal.' },
+          { type: 'info', title: 'Artículo 19', text: 'En atracos será Central quien decida que decisiones se toman de las propuestas por el negociador. En caso de haber una División dedicada a la recuperación de rehenes esta será quien tome las decisiones por encima de los agentes presentes.' },
+          { type: 'info', title: 'Artículo 20', text: 'Cuando pedimos la identificación a una persona, si se niega a darla o no la lleva encima podremos identificarlo realizando un traslado a comisaría en custodia sin detenerlo. Además, se le podrá imponer una sanción económica por no llevar el DNI encima.' },
+        ]
+      },
+      {
+        id: 'articulos-21-30',
+        title: 'Artículos 21-30',
+        icon: '📝',
+        content: [
+          { type: 'info', title: 'Artículo 21', text: 'Las únicas alertas que serán atendidas estarán situadas cerca de nuestra ubicación o simplemente siendo asignados por central.' },
+          { type: 'info', title: 'Artículo 22 - Cacheo', text: 'Se podrá cachear a un sujeto cuando vaya con el rostro cubierto o esté en la zona de algún aviso. No podremos cachear a civiles por la calle por su código de vestimenta, religión, sexo, raza o edad.' },
+          { type: 'info', title: 'Artículo 23', text: 'Es obligatorio proporcionar primeros auxilios a las víctimas hasta que los servicios sanitarios lleguen. Para mantener formado el cuerpo policial, la jefatura se encargará de administrar unos cursos de primeros auxilios.' },
+          { type: 'info', title: 'Artículo 24', text: 'En radio se tendrá que estar en la unidad marcada por Central. Cuando no haya ninguna persona al mando, únicamente habrá patrullas Adam y Union y tendrán que estar en los respectivos canales.' },
+          { type: 'info', title: 'Artículo 25', text: 'En radio será necesario que haya silencio y que los mensajes sean breves, comprensibles y precisos. Además, debemos respetar el turno de palabra.' },
+          { type: 'info', title: 'Artículo 26', text: 'No se podrá solicitar un ascenso, la jefatura observará y tomará decisiones en función de la calidad del trabajo de cada persona. Los ascensos no tienen porque ir relacionados con la antigüedad adquirida en el cuerpo.' },
+          { type: 'info', title: 'Artículo 27', text: 'Cuando haya un delito de carácter grave o muy grave, la policía puede ir a establecimientos cercanos al lugar y acceder a las cámaras.' },
+          { type: 'info', title: 'Artículo 28', text: 'Los civiles con sanciones de carácter muy grave podrán ser reclamados por la justicia para declarar en un juicio.' },
+          { type: 'info', title: 'Artículo 29', text: 'En el maletero del vehículo podremos llevar 2 chalecos antibalas de repuesto y siempre llevar uno puesto sin depender de la alerta que esté.' },
+          { type: 'info', title: 'Artículo 30 - Traslado a federal', text: 'A partir de los 60 meses no será obligatorio pero se podrá realizar un traslado a la prisión federal. Para ello, se necesitan 5 policías de servicio y un teniente o superior que supervise y certifique la operación. Si no tiene los 60 meses será notificado por la fiscalía.' },
+        ]
+      },
+      {
+        id: 'articulos-31-40',
+        title: 'Artículos 31-40',
+        icon: '📝',
+        content: [
+          { type: 'info', title: 'Artículo 31', text: 'Las aeronaves no identificadas que sobrevuelen el espacio aéreo, podrán ser interceptadas en el momento del aterrizaje o podrá ser seguida para una posterior investigación.' },
+          { type: 'warning', title: 'Artículo 32', text: 'En situaciones de riesgo, deberás poner por delante tu vida y la de tu compañero ante cualquier suceso.' },
+          { type: 'info', title: 'Artículo 33', text: 'Desde el rango Oficial III+ en adelante, la pistola 9mm se puede llevar fuera de servicio en momentos puntuales cuando jefatura así lo vea necesario.' },
+          { type: 'forbidden', title: 'Artículo 34', text: 'Durante el servicio queda prohibido el uso constante del teléfono móvil y no se permite llevar collares, pulseras, pendientes u otro complemento de bisutería.' },
+          { type: 'info', title: 'Artículo 35', text: 'Las unidades Mery serán utilizadas con permiso de un rango sargento o superior. Para poder patrullar en dicha unidad, se tendrá que estar equipado con el uniforme adecuado y es obligatorio el patrullaje en binomio siempre que hayan más de 4 oficiales de servicio.' },
+          { type: 'forbidden', title: 'Artículo 36', text: 'Queda vetado el uso del vehículo personal como vehículo de servicio o viceversa.' },
+          { type: 'info', title: 'Artículo 37 - Maniobra Pit', text: 'Para realizar la maniobra Pit, los vehículos de tipo sedán únicamente podrán realizarla a vehículos de tipo sedán. Los vehículos de tipo furgón o todoterreno podrán hacerla a vehículos de sus mismas características y a vehículos de menores características.' },
+          { type: 'info', title: 'Artículo 38', text: 'Si en una persecución recibimos fuego hostil, el copiloto del vehículo podrá disparar a las ruedas y/o al motor para intentar frenarlo.' },
+          { type: 'forbidden', title: 'Artículo 39', text: 'Está prohibido cometer actos delictivos de motivo penal estando fuera de servicio.' },
+          { type: 'info', title: 'Artículo 40', text: 'La aplicación de sanciones es competencia de jefatura aunque asuntos internos las supervisará y podrá imponer nuevas sanciones o apelar las que ya han sido puestas con anterioridad. La licencia de arma permite tener un arma de corto alcance encima, en un vehículo o en una propiedad siempre que se consiga todo de manera legal.' },
+        ]
+      },
+      {
+        id: 'defcon',
+        title: 'Estados de Emergencia (DEFCON)',
+        icon: '🚨',
+        content: [
+          { type: 'info', title: 'DEFCON 5', text: 'Situación de peligro leve y nivel de delincuencia bajo. Los efectivos de fuerzas y cuerpos de seguridad tienen el control. Se portarán las armas reglamentarias y no se tomará ninguna actuación específica. Personas enmascaradas: identificadas y multadas.' },
+          { type: 'info', title: 'DEFCON 4', text: 'Situación de peligro leve, pero el nivel de delincuencia aumenta ligeramente. Se portarán las armas reglamentarias y se podrá limitar el acceso en determinadas zonas.' },
+          { type: 'warning', title: 'DEFCON 3', text: 'Nivel de alerta moderado. Secuestros y tiroteos en zonas con afluencia considerable. Tráfico de armas de medio alcance y robos a grandes establecimientos. Se recomienda cierre de establecimientos. Identificando y registrando vehículos/civiles cerca de zonas de conflicto. Armas de medio calibre autorizadas. Chaleco antibalas siempre puesto. Controles en puntos críticos.' },
+          { type: 'warning', title: 'DEFCON 2', text: 'Nivel de alerta alto. Tiroteos entre civiles y organizaciones criminales. Secuestros y asesinatos a civiles y policías. Tráfico de armas de medio y largo alcance. Actuaciones de DEFCON 4 y 3 con mayor precaución. SMG en maletero o copiloto autorizado. Chaleco siempre puesto.' },
+          { type: 'warning', title: 'DEFCON 1', text: 'Nivel máximo. Tiroteos por bandas/civiles hacia fuerzas de seguridad. Secuestro de miembro de jefatura o amenaza terrorista inminente. Unidades especializadas en sitios críticos. Todas las actuaciones anteriores. Carabinas en maletero o copiloto autorizado. Chaleco siempre puesto.' },
+        ]
+      },
+      {
+        id: 'codigos-policiales',
+        title: 'Códigos Policiales',
+        icon: '📡',
+        content: [
+          { type: 'table', title: 'Códigos radiales', headers: ['Código', 'Significado'], rows: [
+            ['10-00', 'Precaución'],
+            ['10-04', 'Afirmativo/mensaje recibido'],
+            ['10-05', 'Negativo/mensaje no recibido'],
+            ['10-09', 'Repita el mensaje'],
+            ['10-10', 'Fuera de servicio'],
+            ['10-15', 'Persona enmascarada'],
+            ['10-20', 'Ubicación'],
+            ['10-22', 'Regreso a central'],
+            ['10-32', 'Se requiere unidad policial en...'],
+            ['10-33', 'Patrullaje ordinario'],
+            ['10-37', 'Se requiere grúa en...'],
+            ['10-38', 'Se requiere ambulancia en...'],
+            ['10-46', 'Accidente con múltiples víctimas'],
+            ['10-56', 'Intento de suicidio'],
+            ['10-65', 'Ignore la petición'],
+            ['10-72', 'Armado con...'],
+            ['10-80', 'Nos reunimos en...'],
+            ['10-97', 'En camino'],
+            ['10-99', 'Misión completada']
+          ]},
+          { type: 'table', title: 'Códigos mono', headers: ['Código', 'Significado'], rows: [
+            ['148', 'Resistencia al arresto'],
+            ['187', 'Homicidio'],
+            ['207', 'Secuestro'],
+            ['210', 'Parada vehicular'],
+            ['211', 'Robo a mano armada'],
+            ['245', 'Asalto con armas'],
+            ['254V', 'Persecución vehicular'],
+            ['254P', 'Persecución a pie'],
+            ['415', 'Disturbios'],
+            ['417', 'Persona armada'],
+            ['459', 'Allanamiento'],
+            ['487', 'Robo grande'],
+            ['487V', 'Robo de vehículo'],
+            ['488', 'Robo pequeño'],
+            ['502', 'Bajo influencia del conductor']
+          ]},
+          { type: 'table', title: 'Claves generales', headers: ['Código/Clave', 'Significado'], rows: [
+            ['Clave 0', 'Llamada de alta prioridad (código 3)'],
+            ['Código 1', 'Tiroteo'],
+            ['Código 2', 'Llamada rutinaria, luces'],
+            ['Código 3', 'Llamada de emergencia, luces y sirenas'],
+            ['Código 4', 'No es necesaria más ayuda'],
+            ['Código 5', 'Mantenerse alejado'],
+            ['Código 6', 'En espera de asignación'],
+            ['Clave 911', 'Activación de unidad SWAT'],
+            ['Clave Robert', 'Fuerza letal a ruedas en persecución'],
+            ['Clave Pit', 'Desestabilización del vehículo perseguido'],
+            ['Código 100', 'Bloqueo del paso de vehículo en persecución']
+          ]},
+          { type: 'table', title: 'Identificación de unidades', headers: ['Unidad', 'Descripción'], rows: [
+            ['Union-00', 'Unidad vehicular unitripulada'],
+            ['Adam-00', 'Unidad vehicular bitripulada'],
+            ['Lincoln-00', 'Unidades tripuladas por supervisores'],
+            ['Mary-00', 'Motos'],
+            ['Charlie-00', 'Unidad de alta velocidad'],
+            ['King-00', 'Unidad de investigación'],
+            ['OP-00', 'Unidades encubiertas'],
+            ['Aire-00', 'Unidad aérea'],
+            ['David-00', 'Unidad tripulada por miembros SWAT']
+          ]},
+        ]
+      },
+      {
+        id: 'robos-secuestros-lspd',
+        title: 'Robos y Secuestros',
+        icon: '🏦',
+        content: [
+          { type: 'info', title: 'Robos menores (badulaques/licorerías)', items: [
+            'Mínimo 2 agentes de servicio, máximo 4',
+            'Atracadores: mínimo 2, máximo 3',
+            'Armamento reglamentario, sin tirador',
+            'Máximo 3 rehenes'
+          ]},
+          { type: 'info', title: 'Robo mayor (bancos)', items: [
+            'Mínimo 4 policías de servicio, máximo 6 agentes',
+            'Atracadores: mínimo 2, máximo 5',
+            'Se intentará activar unidad SWAT',
+            'Se podrá tener un tirador en ambos bandos',
+            'Máximo 4 rehenes'
+          ]},
+          { type: 'warning', title: 'Negociaciones', items: [
+            'Las negociaciones deben ser lo más calmadas posible',
+            'Solo se negocia por rehenes, NO por botín',
+            'Si no hay rehenes, no se entabla negociación',
+            'La vida de 1 rehén se negocia como si fueran los requeridos',
+            'Prohibido limitar vehículo de atracadores de forma arbitraria'
+          ]},
+          { type: 'info', title: 'Rotura de negociaciones', items: [
+            'Obligatorio informar antes de la huida',
+            'Se rompen cuando: riesgo de vida, se bajan del vehículo, vehículo por campo, entran terceras personas, luces apagadas con poca visibilidad'
+          ]},
+        ]
+      },
+      {
+        id: 'derechos-civil',
+        title: 'Derechos de un Civil',
+        icon: '⚖️',
+        content: [
+          { type: 'info', title: 'Derechos bajo custodia policial', items: [
+            'Derecho a conocer los delitos que se le atribuyen y motivos de la detención',
+            'Derecho a guardar silencio, cualquier cosa que diga podrá ser utilizada en su contra',
+            'Derecho a no declararse culpable',
+            'Derecho a comida, bebida y atención sanitaria',
+            'Derecho a una llamada de un minuto, en presencia de un agente y con altavoz puesto',
+            'Derecho a un abogado siempre que no sea un delito flagrante',
+            'Si es extranjero: derecho a comunicarse con el consulado de su país'
+          ]},
+        ]
+      },
+      {
+        id: 'cadena-perpetua',
+        title: 'Cadena Perpetua',
+        icon: '🔒',
+        content: [
+          { type: 'info', title: 'Procedimiento', text: 'La cadena perpetua necesita supervisión e informe previo, además de varios documentos por parte del gobierno. Si alguien es sentenciado, podrá quedarse en libertad vigilada hasta que se rellenen todos los trámites. Si no se presenta judicialmente, será puesto en busca y captura.' },
+          { type: 'info', title: 'Causas', items: [
+            'Drogas: 800 unidades encima/en vehículo, o 600 en propiedad registrada',
+            'Pertenecer a organización criminal (con investigación previa)',
+            'Asesinato de un agente (CK)',
+            'Armas: 3 armas largas o 6 cortas ilegales',
+            'Multas impagadas superiores a 20k (24h para pagar o busca y captura → CK federal)'
+          ]},
+        ]
+      },
+      {
+        id: 'icao',
+        title: 'Código ICAO (Alfabeto Fonético)',
+        icon: '🔤',
+        content: [
+          { type: 'table', title: 'Alfabeto fonético', headers: ['Letra', 'Palabra', 'Letra', 'Palabra'], rows: [
+            ['A', 'ALFA', 'N', 'NOVEMBER'],
+            ['B', 'BRAVO', 'Ñ', 'ÑU'],
+            ['C', 'CHARLIE', 'O', 'OSCAR'],
+            ['D', 'DELTA', 'P', 'PAPA'],
+            ['E', 'ECHO', 'Q', 'QUÉBEC'],
+            ['F', 'FOXTROT', 'R', 'ROMEO'],
+            ['G', 'GOLF', 'S', 'SIERRA'],
+            ['H', 'HOTEL', 'T', 'TANGO'],
+            ['I', 'INDIA', 'U', 'UNIFORM'],
+            ['J', 'JULIET', 'V', 'VICTOR'],
+            ['K', 'KILO', 'W', 'WHISKY'],
+            ['L', 'LIMA', 'X', 'X-RAY'],
+            ['M', 'MIKE', 'Y', 'YANKEE'],
+            ['', '', 'Z', 'ZULÚ']
+          ]},
+        ]
+      },
+    ]
+  },
+
+  // ============================================================
+  // MANUAL DE PROCEDIMIENTOS LSPD
+  // ============================================================
+  {
+    id: 'manual-lspd',
+    title: 'Manual de Procedimientos LSPD',
+    shortTitle: 'Manual LSPD',
+    description: 'Procedimientos operativos, patrullaje, denuncias, felony stop, paradas de tráfico y más.',
+    icon: '📋',
+    color: '#2563eb',
+    sections: [
+      {
+        id: 'referencias',
+        title: 'Sistema de Referencias',
+        icon: '📍',
+        content: [
+          { type: 'info', title: 'Uso obligatorio', items: [
+            'Las referencias son totalmente obligatorias para organizar el patrullaje',
+            'Acceder: F7 → segunda pestaña → referencias',
+            'Comisaría: referencia de comisaría',
+            'Patrullaje: referencia de patrullaje',
+            'Patrullaje aéreo: referencia de aire',
+            'Persecución en moto: referencia de persecución (color a elección)',
+            'Persecución en auto: referencia de persecución (color a elección)',
+            'TAC: referencia numerada (TAC-01 → referencia 1, etc.)',
+            'Código 100: QRR (automático al presionar botón)'
+          ]},
+        ]
+      },
+      {
+        id: 'patrullaje',
+        title: 'Patrullaje',
+        icon: '🚔',
+        content: [
+          { type: 'info', title: 'Reglas de patrullaje', items: [
+            'Obligatoriedad de patrullaje en binomios para cadetes',
+            'Opción de llevar chaleco extra por agente en el vehículo',
+            'Portación de 10 cargadores extra por agente',
+            'Herramientas: cámara de foto y linterna',
+            'Asignación en radio adecuada en todo momento'
+          ]},
+          { type: 'table', title: 'Unidades de patrullaje', headers: ['Unidad', 'Descripción'], rows: [
+            ['MANDO', 'Responsable de control de unidades de emergencia'],
+            ['UNIÓN', 'Unidad vehicular con un único efectivo'],
+            ['ADAM', 'Unidad vehicular con dos efectivos'],
+            ['MARY', 'Unidad motorizada con un único efectivo'],
+            ['KING', 'Patrullaje de incógnito (Detective Bureau y jefatura)'],
+            ['TOM', 'Patrullajes especiales (pie, bicicleta, marítimo)'],
+            ['PEGASO', 'Unidad aérea (requiere licencia de vuelo)'],
+            ['COMISARÍA', 'Oficiales en comisaría atendiendo denuncias']
+          ]},
+        ]
+      },
+      {
+        id: 'denuncias',
+        title: 'Denuncias',
+        icon: '📝',
+        content: [
+          { type: 'info', title: 'Procedimiento', items: [
+            'Abrir tablet → botón de denuncia → nueva denuncia',
+            'Incluir: nombre del denunciante, nombre del denunciado (si es posible)',
+            'Incluir: día y hora, descripción de lo sucedido, lugar',
+            'Los incidentes NO SON DENUNCIAS',
+            'Únicas denuncias con incidente: robos a establecimientos',
+            'Robos: estado Ganado/Perdido, lo confiscado, toda la información necesaria'
+          ]},
+        ]
+      },
+      {
+        id: 'felony-stop',
+        title: 'Felony Stop',
+        icon: '🛑',
+        content: [
+          { type: 'info', title: 'Procedimiento', items: [
+            'Dos tipos: felony de un carril y de doble carril',
+            '1. Pedir al conductor que retire las llaves del contacto y las tire por la ventanilla',
+            '2. Que saque las manos por la ventanilla y abra la puerta desde fuera',
+            '3. Que salga con las manos en alto',
+            '4. Decirle que se vaya dos pasos hacia detrás y dos hacia la izquierda y se arrodille',
+            '5. En caso de más implicados: conductor → copiloto → parte trasera'
+          ]},
+          { type: 'warning', title: 'Cuándo aplicar', items: [
+            'Vehículo reportado como robado',
+            'Vehículo involucrado en escena del crimen',
+            'Orden de búsqueda contra ese vehículo'
+          ]},
+          { type: 'warning', title: 'IMPORTANTE', text: 'Cuando el sujeto se baje del vehículo, los demás oficiales deben de bajar, apuntarle con letal y cubrirse con la puerta.' },
+        ]
+      },
+      {
+        id: 'parada-trafico',
+        title: 'Parada de Tráfico (210)',
+        icon: '🚗',
+        content: [
+          { type: 'info', title: 'Pasos', items: [
+            'Dar el alto con sirenas y luces',
+            'Colocar distintivo ocupado',
+            'Pedir al conductor que retire las llaves y las tire por la ventana',
+            'Informar del 210 a H-50',
+            'El copiloto se baja del vehículo y se acerca al sujeto',
+            'Identificación y comunicación de la parada de tráfico',
+            'Colocar multa',
+            'Devolver documentos y llaves',
+            'Retirar distintivo ocupado'
+          ]},
+        ]
+      },
+      {
+        id: 'cacheo-lspd',
+        title: 'Cacheo',
+        icon: '🔍',
+        content: [
+          { type: 'info', title: 'Cuándo cachear', text: 'Siempre se debe cachear a cualquier persona indicada en un delito o como presunto en caso de ser aprendido en flagrancia o alrededores de un llamamiento de un civil.' },
+          { type: 'info', title: 'Cacheo en comisaría', text: 'Al sacarlo del vehículo por la parte de abajo en el garaje. Se le quitan SOLAMENTE armas y medios de comunicación (radio o teléfono). SÍ se le devuelven al final.' },
+        ]
+      },
+      {
+        id: 'radio-interna',
+        title: 'Radio Interna',
+        icon: '📻',
+        content: [
+          { type: 'info', title: 'Pedir asignación', text: 'F7 → segunda pestaña → 10-8 y estar en el canal de espera de asignación.' },
+          { type: 'info', title: 'Iniciar patrullaje', text: 'F7 → segunda pestaña → Código 2. Estar en el canal correspondiente con la referencia activa.' },
+        ]
+      },
+      {
+        id: 'persecuciones-lspd',
+        title: 'Persecuciones (254-V)',
+        icon: '🏎️',
+        content: [
+          { type: 'info', title: 'Procedimiento', items: [
+            'Informar a central para que asigne refuerzo',
+            'Asignar mando de operativo para decidir colores de referencias y roles',
+            'Mantener la radio lo más limpia posible',
+            'Prioridad a los comunicados del agente que narra'
+          ]},
+          { type: 'warning', title: 'Narración', text: 'Nunca diremos derecha o izquierda, nos orientamos por puntos cardinales: Arriba = Norte, Abajo = Sur, Derecha = Este, Izquierda = Oeste.' },
+        ]
+      },
+      {
+        id: 'robo-vehiculo',
+        title: 'Robo de Vehículo (487V)',
+        icon: '🚘',
+        content: [
+          { type: 'info', title: 'Procedimiento', items: [
+            'Verificar si la matrícula coincide con la última alerta',
+            'Dar el alto al sujeto',
+            'Si hace caso omiso: proceder como 254-V'
+          ]},
+        ]
+      },
+      {
+        id: 'venta-droga',
+        title: 'Venta de Droga',
+        icon: '💊',
+        content: [
+          { type: 'info', title: 'Procedimiento', items: [
+            'Acudir con lumínicas pero SIN sonoras (para pillar en flagrante)',
+            'No podemos cachear aunque el sujeto esté en la zona',
+            'Solo cachear si vemos al sujeto vendiendo estupefacientes (mientras está con el otro NPC)'
+          ]},
+        ]
+      },
+    ]
+  },
+
+  // ============================================================
   // CÓDIGO PENAL (basado en la normativa de ilícitos)
   // ============================================================
   {
