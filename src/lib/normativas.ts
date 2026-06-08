@@ -28,6 +28,7 @@ export interface NormativaData {
   description: string;
   icon: string;
   color: string;
+  backgroundImage: string;
   sections: NormativaSection[];
 }
 
@@ -42,6 +43,7 @@ export const normativas: NormativaData[] = [
     description: 'La normativa base del servidor. Todos los jugadores deben conocerla antes de jugar.',
     icon: '📜',
     color: '#3b82f6',
+    backgroundImage: '/images/normativas/general.jpg',
     sections: [
       {
         id: 'mg',
@@ -264,6 +266,7 @@ export const normativas: NormativaData[] = [
     description: 'Regulaciones sobre bandas, robos, secuestros, drogas y actividades ilegales.',
     icon: '🔫',
     color: '#ef4444',
+    backgroundImage: '/images/normativas/ilicitos.jpg',
     sections: [
       {
         id: 'bandas-general',
@@ -541,6 +544,7 @@ export const normativas: NormativaData[] = [
     description: 'Regulación de comercios, locales, eventos, personal y economía.',
     icon: '🏪',
     color: '#f59e0b',
+    backgroundImage: '/images/normativas/comercios.jpg',
     sections: [
       {
         id: 'general-comercios',
@@ -682,6 +686,7 @@ export const normativas: NormativaData[] = [
     description: 'Normativa interna del equipo de administración del servidor.',
     icon: '🛡️',
     color: '#8b5cf6',
+    backgroundImage: '/images/normativas/staff.jpg',
     sections: [
       {
         id: 'principios',
@@ -804,6 +809,7 @@ export const normativas: NormativaData[] = [
     description: 'Requisitos y normas para creadores de contenido del servidor.',
     icon: '📺',
     color: '#ec4899',
+    backgroundImage: '/images/normativas/streamers.jpg',
     sections: [
       {
         id: 'requisitos',
@@ -876,6 +882,7 @@ export const normativas: NormativaData[] = [
     description: 'Reglamento interno del cuerpo de policía. Requisitos, artículos, estados de emergencia, códigos y más.',
     icon: '👮',
     color: '#1d4ed8',
+    backgroundImage: '/images/normativas/lspd.jpg',
     sections: [
       {
         id: 'requisitos-lspd',
@@ -1144,6 +1151,7 @@ export const normativas: NormativaData[] = [
     description: 'Procedimientos operativos, patrullaje, denuncias, felony stop, paradas de tráfico y más.',
     icon: '📋',
     color: '#2563eb',
+    backgroundImage: '/images/normativas/manual-lspd.jpg',
     sections: [
       {
         id: 'referencias',
@@ -1310,6 +1318,7 @@ export const normativas: NormativaData[] = [
     description: 'Código Penal completo del Estado de San Andreas — Delitos, penas y multas.',
     icon: '⚖️',
     color: '#dc2626',
+    backgroundImage: '/images/normativas/codigo-penal.jpg',
     sections: [
       {
         id: 'capitulo-i',

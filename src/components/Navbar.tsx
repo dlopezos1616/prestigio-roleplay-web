@@ -22,7 +22,13 @@ export default function Navbar({ onNavigate, currentHash }: NavbarProps) {
             onClick={() => onNavigate('#/')}
             className="flex items-center gap-3 group cursor-pointer"
           >
-            <div className="w-9 h-9 rounded-lg overflow-hidden flex items-center justify-center bg-white/5 border border-white/10 group-hover:border-[rgba(0,180,255,0.3)] transition-colors">
+            <div
+              className="w-9 h-9 rounded-lg overflow-hidden flex items-center justify-center transition-all group-hover:shadow-[0_0_15px_rgba(0,180,255,0.2)]"
+              style={{
+                backgroundColor: 'rgba(0,180,255,0.05)',
+                border: '1px solid rgba(0,180,255,0.12)',
+              }}
+            >
               <img
                 src="/logo.png"
                 alt="Prestigio RP"
@@ -30,10 +36,10 @@ export default function Navbar({ onNavigate, currentHash }: NavbarProps) {
               />
             </div>
             <div className="flex flex-col">
-              <span className="text-sm font-bold tracking-widest text-white group-hover:text-[#00b4ff] transition-colors">
+              <span className="text-sm font-black tracking-widest text-white group-hover:text-[#00b4ff] transition-colors">
                 PRESTIGIO
               </span>
-              <span className="text-[10px] font-medium tracking-[0.2em] text-[#d4a843] -mt-0.5">
+              <span className="text-[10px] font-bold tracking-[0.2em] text-[#d4a843] -mt-0.5">
                 ROLEPLAY
               </span>
             </div>
@@ -43,7 +49,7 @@ export default function Navbar({ onNavigate, currentHash }: NavbarProps) {
           <div className="hidden md:flex items-center gap-1">
             <button
               onClick={() => onNavigate('#/')}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer ${
+              className={`px-4 py-2 rounded-lg text-sm font-bold tracking-wide transition-all cursor-pointer ${
                 isHome
                   ? 'text-[#00b4ff] bg-[rgba(0,180,255,0.1)]'
                   : 'text-[#a1a1aa] hover:text-white hover:bg-white/5'
@@ -57,7 +63,7 @@ export default function Navbar({ onNavigate, currentHash }: NavbarProps) {
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
                 onBlur={() => setTimeout(() => setDropdownOpen(false), 150)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1.5 cursor-pointer ${
+                className={`px-4 py-2 rounded-lg text-sm font-bold tracking-wide transition-all flex items-center gap-1.5 cursor-pointer ${
                   !isHome
                     ? 'text-[#00b4ff] bg-[rgba(0,180,255,0.1)]'
                     : 'text-[#a1a1aa] hover:text-white hover:bg-white/5'
@@ -75,8 +81,8 @@ export default function Navbar({ onNavigate, currentHash }: NavbarProps) {
               </button>
 
               {dropdownOpen && (
-                <div className="absolute top-full right-0 mt-2 w-64 glass-strong rounded-xl overflow-hidden shadow-2xl shadow-black/40 animate-fade-in">
-                  <div className="py-2">
+                <div className="absolute top-full right-0 mt-2 w-72 glass-strong rounded-xl overflow-hidden shadow-2xl shadow-black/50 animate-fade-in gta-scanlines">
+                  <div className="py-1">
                     {normativas.map((n) => (
                       <button
                         key={n.id}
@@ -84,13 +90,24 @@ export default function Navbar({ onNavigate, currentHash }: NavbarProps) {
                           onNavigate(`#/normativa/${n.id}`);
                           setDropdownOpen(false);
                         }}
-                        className="w-full px-4 py-2.5 flex items-center gap-3 text-left hover:bg-white/5 transition-colors cursor-pointer"
+                        className="w-full px-4 py-3 flex items-center gap-3 text-left hover:bg-white/5 transition-colors cursor-pointer group/item"
                       >
-                        <span className="text-lg">{n.icon}</span>
-                        <div>
-                          <div className="text-sm text-white font-medium">{n.shortTitle}</div>
-                          <div className="text-xs text-[#a1a1aa] line-clamp-2">{n.description}</div>
+                        <div
+                          className="w-8 h-8 rounded-lg flex items-center justify-center text-base shrink-0"
+                          style={{
+                            backgroundColor: `${n.color}12`,
+                            border: `1px solid ${n.color}20`,
+                          }}
+                        >
+                          {n.icon}
                         </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-sm text-white font-bold group-hover/item:text-[#00b4ff] transition-colors">{n.shortTitle}</div>
+                          <div className="text-xs text-[#637381] line-clamp-1">{n.description}</div>
+                        </div>
+                        <svg className="w-3.5 h-3.5 text-[#4a4a55] group-hover/item:text-[#00b4ff] transition-colors shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
                       </button>
                     ))}
                   </div>
@@ -125,7 +142,7 @@ export default function Navbar({ onNavigate, currentHash }: NavbarProps) {
                 onNavigate('#/');
                 setMenuOpen(false);
               }}
-              className={`w-full px-4 py-2.5 rounded-lg text-sm font-medium text-left transition-all cursor-pointer ${
+              className={`w-full px-4 py-2.5 rounded-lg text-sm font-bold tracking-wide text-left transition-all cursor-pointer ${
                 isHome
                   ? 'text-[#00b4ff] bg-[rgba(0,180,255,0.1)]'
                   : 'text-[#a1a1aa] hover:text-white hover:bg-white/5'
@@ -134,7 +151,7 @@ export default function Navbar({ onNavigate, currentHash }: NavbarProps) {
               Inicio
             </button>
             <div className="pt-1 pb-1">
-              <span className="px-4 text-xs font-semibold tracking-wider text-[#d4a843] uppercase">
+              <span className="px-4 text-xs font-black tracking-widest text-[#d4a843] uppercase">
                 Normativas
               </span>
             </div>
@@ -148,7 +165,7 @@ export default function Navbar({ onNavigate, currentHash }: NavbarProps) {
                 className="w-full px-4 py-2.5 flex items-center gap-3 rounded-lg text-left hover:bg-white/5 transition-colors cursor-pointer"
               >
                 <span className="text-lg">{n.icon}</span>
-                <span className="text-sm text-[#e4e4e7]">{n.shortTitle}</span>
+                <span className="text-sm text-[#e4e4e7] font-medium">{n.shortTitle}</span>
               </button>
             ))}
           </div>

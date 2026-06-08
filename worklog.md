@@ -1,46 +1,62 @@
 ---
 Task ID: 1
 Agent: Main Agent
-Task: Replace placeholder Código Penal with comprehensive criminal code data and professional table styling
+Task: Complete GTA RP themed redesign of Prestigio Roleplay website
 
 Work Log:
-- Saved comprehensive código penal data as markdown file at /home/z/my-project/normativas/codigo_penal.md
-- Updated NormativaBlock interface to add 'penal-table' type and 'chapterTitle' optional field
-- Replaced the placeholder Código Penal section (4 sections with generic data) with full criminal code (12 chapters, 130+ articles) organized by chapters I-XII
-- Created professional penal-table rendering in NormativaBlock.tsx with:
-  - Chapter header banners with red accent styling
-  - Article number badges in monospace font
-  - Gold-colored importe (fine) amounts
-  - Red-highlighted meses (prison months) badges for articles with prison time
-  - Left border accent for rows with prison sentences
-  - Hover effects and responsive mobile design
-- Added comprehensive CSS in globals.css for penal code styling (~200 lines)
-- Built successfully and verified server running on port 3000
+- Generated 9 GTA-themed background images using z-ai-generate CLI (general, ilicitos, comercios, staff, streamers, lspd, manual-lspd, codigo-penal, hero-bg)
+- Updated NormativaData interface with backgroundImage field
+- Added backgroundImage path to all 8 normativas in data file
+- Completely redesigned NormativaCard component with:
+  - Background images that appear on hover with fade/scale animation
+  - Dark gradient overlays with color tint
+  - Scanline effect on hover
+  - Vignette overlay
+  - Neon accent lines (top and bottom)
+  - GTA-style "ACCEDER" button and "X SECCIONES" tags
+  - Smooth 700ms hover transitions
+- Completely redesigned NormativaPage component with:
+  - Full-width themed header banner with background image
+  - Multi-layered overlays (dark gradient, color tint, scanlines, vignette)
+  - GTA-style tags (LOS SANTOS, PRESTIGIO RP, X SECCIONES)
+  - Neon bottom accent line on header
+  - Animated header entrance with staggered delays
+  - Enhanced book-mode navigation with GTA styling
+  - Content card with subtle separator and section header
+  - Improved bottom navigation with hover lift effects
+- Completely redesigned main page (page.tsx) with:
+  - Hero section using hero-bg.jpg background image
+  - Multi-layer overlays (dark gradient, blue radial, scanlines, grid, vignette)
+  - Staggered entrance animations for all hero elements
+  - GTA-style "LOS SANTOS" tag
+  - Bottom neon accent line (blue + gold gradient)
+- Updated Navbar with:
+  - Enhanced glassmorphism with blur-24
+  - Neon bottom accent line (::after pseudo-element)
+  - Dropdown with scanline overlay and arrow icons
+  - Icon containers with color backgrounds for each normativa
+- Updated Footer with:
+  - Top neon accent line
+  - Enhanced logo container with blue border
+  - Better typography with font-black
+- Updated globals.css with:
+  - GTA scanline effect (.gta-scanlines)
+  - GTA card style (.gta-card) with hover lift
+  - GTA header banner (.gta-header-banner)
+  - GTA navigation bar (.gta-nav-bar)
+  - GTA index panel (.gta-index-panel)
+  - GTA content card (.gta-content-card)
+  - GTA tag style (.gta-tag)
+  - GTA nav button hover effects with glow
+  - Enhanced content block styles with hover transitions
+  - Navbar neon bottom border (::after)
+  - Enhanced table header styles
+  - Mobile responsive adjustments for header banner
+- Build verified successfully with `npx next build`
 
 Stage Summary:
-- Código Penal now shows 12 sections (12 chapters) with 130+ professional articles
-- Each chapter has its own table with columns: Artículo, Descripción, Importe ($), Meses
-- Professional criminal code aesthetic with red accent theme, article badges, and prison time indicators
-- All data matches the user's provided criminal code exactly
----
-Task ID: 2
-Agent: Main Agent
-Task: Convert all normativa pages to book-mode navigation (page-by-page sections)
-
-Work Log:
-- Rewrote NormativaPage.tsx completely to implement book-mode navigation
-- Each section is now a separate "page" — only one section visible at a time
-- Added top navigation bar with: Index toggle, current section title, prev/next buttons, progress bar
-- Added bottom navigation with: prev/next buttons showing section names, page indicator dots
-- Added index panel (togglable) showing all sections as clickable buttons with numbered badges
-- Added keyboard navigation: Arrow Left/Right (or Up/Down) to navigate between sections
-- Added smooth animation when switching pages (bookPageIn keyframe)
-- Added progress bar that fills based on current section position
-- Auto-scrolls to top on page change
-- Resets to page 0 when switching between different normativas
-- Works for ALL normativas (General, Criminalidad, Comercios, Staff, Streamers, LSPD, Manual LSPD, Código Penal)
-
-Stage Summary:
-- All 8 normativas now use book-mode navigation
-- Users no longer need to scroll endlessly — each section is its own page
-- Navigation is intuitive: buttons, keyboard arrows, index panel, and progress dots
+- All 9 images generated in /home/z/my-project/public/images/
+- All components redesigned with GTA RP immersive theme
+- Book-mode navigation already implemented and working
+- Build passes with no errors
+- Site now features: background images on card hover, themed headers, scanline effects, vignette overlays, neon accents, GTA-style tags and labels, smooth animations

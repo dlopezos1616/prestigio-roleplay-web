@@ -171,7 +171,7 @@ export default function NormativaBlockComponent({ block }: NormativaBlockProps) 
       {(block.title || config.label) && (
         <div className="flex items-center gap-2 mb-2">
           <span className="text-base">{config.icon}</span>
-          <h4 className="text-sm font-bold" style={{ color: config.titleColor }}>
+          <h4 className="text-sm font-bold tracking-wide" style={{ color: config.titleColor }}>
             {block.title || config.label}
           </h4>
         </div>
@@ -186,9 +186,9 @@ export default function NormativaBlockComponent({ block }: NormativaBlockProps) 
       {block.items && block.items.length > 0 && (
         <ul className="space-y-1.5 mt-2">
           {block.items.map((item, i) => (
-            <li key={i} className="flex items-start gap-2 text-sm text-[#a1a1aa] leading-relaxed">
+            <li key={i} className="flex items-start gap-2.5 text-sm text-[#a1a1aa] leading-relaxed">
               <span
-                className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0"
+                className="w-1.5 h-1.5 rounded-full mt-2 shrink-0"
                 style={{ backgroundColor: config.bulletColor }}
               />
               <span>{item}</span>
