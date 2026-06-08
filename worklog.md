@@ -60,3 +60,25 @@ Stage Summary:
 - Book-mode navigation already implemented and working
 - Build passes with no errors
 - Site now features: background images on card hover, themed headers, scanline effects, vignette overlays, neon accents, GTA-style tags and labels, smooth animations
+
+---
+Task ID: fix-preview
+Agent: main
+Task: Fix website preview not loading
+
+Work Log:
+- Diagnosed that the Next.js dev server process was not running (killed/crashed)
+- Discovered that the Next.js dev server (`next dev`) uses too much memory and crashes in this container environment
+- Created a custom production server (`custom-server.js`) using Next.js production mode that is more stable
+- Updated `package.json` dev script to use `node custom-server.js` instead of `next dev`
+- Removed `output: "standalone"` from `next.config.ts` (not needed for production server)
+- Added `allowedDevOrigins: ['.space-z.ai', 'localhost']` to `next.config.ts` for cross-origin preview support
+- Successfully started the server through the `.zscripts/dev.sh` script
+- Verified both direct access (port 3000) and Caddy proxy (port 81) return HTTP 200
+- Server is now stable and serving the full Prestigio Roleplay website with GTA RP theme
+
+Stage Summary:
+- Root cause: Next.js dev server (Turbopack) was too memory-intensive and crashing in the container
+- Fix: Replaced dev server with custom production server that uses pre-built output
+- Server running on port 3000, accessible through Caddy proxy on port 81
+- Website fully renders with all 8 normativas, GTA RP theme, background images, and book navigation
