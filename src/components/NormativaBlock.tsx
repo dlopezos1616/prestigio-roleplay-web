@@ -63,10 +63,71 @@ const blockConfig: Record<string, { icon: string; label: string; className: stri
     titleColor: '#00b4ff',
     bulletColor: '#00b4ff',
   },
+  'penal-table': {
+    icon: '⚖️',
+    label: 'Código Penal',
+    className: 'block-penal-table',
+    titleColor: '#dc2626',
+    bulletColor: '#dc2626',
+  },
 };
 
 export default function NormativaBlockComponent({ block }: NormativaBlockProps) {
   const config = blockConfig[block.type] || blockConfig.info;
+
+  // Penal table block — professional criminal code style
+  if (block.type === 'penal-table' && block.headers && block.rows) {
+    return (
+      <div className="penal-code-block">
+        {/* Chapter Header Banner */}
+        {block.chapterTitle && (
+          <div className="penal-chapter-header">
+            <div className="penal-chapter-icon">⚖️</div>
+            <h4 className="penal-chapter-title">{block.chapterTitle}</h4>
+          </div>
+        )}
+
+        {/* Penal Table */}
+        <div className="overflow-x-auto">
+          <table className="penal-table">
+            <thead>
+              <tr>
+                {block.headers.map((header, i) => (
+                  <th key={i} className={`penal-th penal-th-${i}`}>{header}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {block.rows.map((row, i) => {
+                const importe = row[2] || '0';
+                const meses = row[3] || '0';
+                const hasPrisonTime = parseInt(meses.replace(/\./g, '')) > 0;
+                return (
+                  <tr key={i} className={`penal-row ${hasPrisonTime ? 'penal-row-prison' : ''}`}>
+                    {row.map((cell, j) => (
+                      <td key={j} className={`penal-td penal-td-${j}`}>
+                        {j === 0 ? (
+                          <span className="penal-article-num">{cell}</span>
+                        ) : j === 2 ? (
+                          <span className="penal-importe">{cell}$</span>
+                        ) : j === 3 ? (
+                          <span className={`penal-meses ${hasPrisonTime ? 'penal-meses-active' : ''}`}>
+                            {parseInt(meses.replace(/\./g, '')) > 0 ? `${cell} meses` : '—'}
+                          </span>
+                        ) : (
+                          cell
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    );
+  }
 
   // Table block
   if (block.type === 'table' && block.headers && block.rows) {

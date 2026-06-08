@@ -12,12 +12,13 @@ export interface NormativaSection {
 }
 
 export interface NormativaBlock {
-  type: 'definition' | 'allowed' | 'forbidden' | 'sanction' | 'example' | 'info' | 'warning' | 'table';
+  type: 'definition' | 'allowed' | 'forbidden' | 'sanction' | 'example' | 'info' | 'warning' | 'table' | 'penal-table';
   title?: string;
   text?: string;
   items?: string[];
   headers?: string[];
   rows?: string[][];
+  chapterTitle?: string;
 }
 
 export interface NormativaData {
@@ -1300,76 +1301,300 @@ export const normativas: NormativaData[] = [
   },
 
   // ============================================================
-  // CÓDIGO PENAL (basado en la normativa de ilícitos)
+  // CÓDIGO PENAL - Prestigio Roleplay
   // ============================================================
   {
     id: 'codigo-penal',
     title: 'Código Penal',
     shortTitle: 'Código Penal',
-    description: 'Delitos, penas y multas del servidor Prestigio Roleplay.',
+    description: 'Código Penal completo del Estado de San Andreas — Delitos, penas y multas.',
     icon: '⚖️',
     color: '#dc2626',
     sections: [
       {
-        id: 'delitos-menores',
-        title: 'Delitos Menores',
-        icon: '📝',
+        id: 'capitulo-i',
+        title: 'Cap. I – Delitos contra la Seguridad Vial',
+        icon: '🚗',
         content: [
-          { type: 'table', title: 'Delitos menores y sus penas', headers: ['Delito', 'Descripción', 'Pena'], rows: [
-            ['Hurto menor', 'Robo de objetos de poco valor sin violencia', 'Multa + tiempo en commissaría'],
-            ['Conducción temeraria', 'Conducir de forma peligrosa sin motivo de rol', 'Multa + retirada de licencia temporal'],
-            ['Desacato a la autoridad', 'Falta de respeto o desobediencia a la policía', 'Multa + arresto breve'],
-            ['Posesión de sustancias', 'Portar drogas en pequeñas cantidades', 'Multa + decomiso'],
-            ['Disturbios', 'Alterar el orden público', 'Multa + arresto']
+          { type: 'penal-table', chapterTitle: 'CAPÍTULO I – DELITOS CONTRA LA SEGURIDAD VIAL', headers: ['Artículo', 'Descripción', 'Importe ($)', 'Meses'], rows: [
+            ['Art. 1.01', 'Conducir un vehículo sin licencia — Conducir un vehículo de 2 o más ruedas y/o embarcación sin debida licencia.', '1.250', '0'],
+            ['Art. 1.02', 'Uso excesivo del claxon — Utilizar de forma inapropiada y repetida el claxon.', '200', '0'],
+            ['Art. 1.03', 'Giro indebido — Hacer un cambio de sentido en zona no habilitada o pisando línea continua.', '200', '0'],
+            ['Art. 1.04', 'Circular en sentido contrario — Conducir o invadir con el vehículo el sentido contrario de la circulación.', '250', '0'],
+            ['Art. 1.05', 'Mal estacionamiento — Estacionar en un lugar no habilitado o autorizado el vehículo.', '300', '0'],
+            ['Art. 1.06', 'Obstruir la circulación — Impedir o dificultar la circulación del tráfico.', '300', '0'],
+            ['Art. 1.07', 'Ignorar las señales de tráfico — No hacer caso a cualquier señal de tráfico.', '200', '0'],
+            ['Art. 1.08', 'Saltarse un semáforo — Saltarse o no realizar los tres segundos de parada en un semáforo.', '250', '0'],
+            ['Art. 1.09', 'No ceder el paso a vehículos de emergencia — Obstaculizar con el vehículo a pie el paso y las labores de los vehículos de emergencia.', '550', '0'],
+            ['Art. 1.10', 'Adelantamiento indebido — Adelantar a un vehículo por la derecha fuera de poblado o pisando línea continua.', '250', '0'],
+            ['Art. 1.11', 'Circular marcha atrás — Circular de forma excesiva o indebida marcha atrás.', '200', '0'],
+            ['Art. 1.12', 'Conducción de vehículo en malas condiciones — Circular un vehículo con daños visibles en chapa o cristales.', '250', '0'],
+            ['Art. 1.13', 'Circular por zonas no habilitadas — Circular con el vehículo sobre cualquier superficie no asfaltada o señalizada en el mapa para poder circular sobre ella.', '350', '0'],
+            ['Art. 1.14', 'Circular con las luces apagadas — Circular con las luces de cruce o largas sin estar encendidas cuando es de noche.', '200', '0'],
+            ['Art. 1.15', 'Circular con motocicleta sin casco — Conducir una motocicleta o ciclomotor sin casco.', '150', '0'],
+            ['Art. 1.16', 'Conducción temeraria — Circular poniendo en peligro a los ciudadanos o conductores. Incluye: Exceso de velocidad e Ignorar señales de tráfico.', '800', '6'],
+            ['Art. 1.17', 'Omitir las indicaciones en una regulación de tráfico — Hacer caso omiso a las indicaciones que realicen los policías que estén regulando el tráfico.', '300', '0'],
+            ['Art. 1.18', 'Saltar u omitir un control de tráfico — No detenerse en un control de tráfico y omitir la señalización e indicaciones de los agentes. Incluye: Huida de la justicia.', '1.600', '12'],
+            ['Art. 1.19', 'Exceso de velocidad en vía urbana — Superior a 80 km/h: sanción económica. Superando 150 km/h: condena. Requiere radar policial.', '630', '5'],
+            ['Art. 1.20', 'Exceso de velocidad en carreteras secundarias — Superior a 120 km/h: sanción económica. Superando 180 km/h: condena. Requiere radar policial.', '475', '5'],
+            ['Art. 1.21', 'Exceso de velocidad en autovías — Superior a 120 km/h: sanción económica. Superando 180 km/h: condena. Requiere radar policial.', '550', '5'],
+            ['Art. 1.22', 'Uso del teléfono móvil al volante — Se aplicará cuando el conductor haga uso del teléfono móvil. Solo permitido manos libres si no supone peligro.', '250', '0'],
+            ['Art. 1.23', 'No respetar el paso de peatones — No ceder el paso a peatones en vías de paso para estos.', '250', '0'],
+            ['Art. 1.24', 'Conducir bajo los efectos del alcohol — Tras test de alcoholemia. Si no conforme, puede solicitar segunda prueba pasados 10 minutos.', '660', '5'],
+            ['Art. 1.25', 'Conducir bajo los efectos de sustancias estupefacientes — Tras test de drogas. Si no conforme, puede solicitar segunda prueba pasados 10 minutos.', '850', '7'],
+            ['Art. 1.26', 'Conducción de vehículo aéreo sin licencia — Conducir un vehículo aéreo sin debida licencia.', '15.000', '20'],
+            ['Art. 1.27', 'Violación del espacio aéreo de instalaciones — Invasión de la zona de exclusión aérea de un determinado lugar.', '3.500', '20'],
           ]},
         ]
       },
       {
-        id: 'delitos-graves',
-        title: 'Delitos Graves',
-        icon: '⚠️',
+        id: 'capitulo-ii',
+        title: 'Cap. II – Contra la Libertad e Integridad Física',
+        icon: '👊',
         content: [
-          { type: 'table', title: 'Delitos graves y sus penas', headers: ['Delito', 'Descripción', 'Pena'], rows: [
-            ['Asalto a mano armada', 'Amenazar con arma para robar', 'Prisión federal + multa elevada'],
-            ['Secuestro', 'Privar de libertad a otra persona', 'Prisión federal + multa'],
-            ['Robo a establecimiento', 'Asalto a negocio (pequeño/mediano)', 'Prisión + multa según tipo'],
-            ['Tenencia de armas ilegales', 'Portar armas sin licencia', 'Prisión + decomiso + multa'],
-            ['Tráfico de drogas', 'Vender/distribuir sustancias ilegales', 'Prisión federal + multa'],
-            ['Evasión de prisión', 'Escapar de custodia policial', 'Agravante: pena aumentada']
+          { type: 'penal-table', chapterTitle: 'CAPÍTULO II – DELITOS CONTRA LA LIBERTAD, LA INTEGRIDAD FÍSICA Y CONDUCTAS ERRÓNEAS', headers: ['Artículo', 'Descripción', 'Importe ($)', 'Meses'], rows: [
+            ['Art. 2.01', 'Disturbios en la vía pública — Riña tumultuaria utilizando medios que pongan en peligro la vida o integridad de las personas.', '900', '5'],
+            ['Art. 2.02', 'Agresión a un civil — Acción violenta a otra persona con intención de causar un daño.', '1.200', '4'],
+            ['Art. 2.03', 'Faltas de respeto a civil — Lesionar o agredir verbalmente la dignidad de otra persona, perjudicando su fama o reputación.', '500', '0'],
+            ['Art. 2.04', 'Amenaza verbal a un civil — Gesto, expresión o acción que anticipa la intención de dañar a alguien.', '400', '0'],
+            ['Art. 2.05', 'Alteración del orden público — Alterar la paz pública con actos de violencia o amenazas (rostro oculto, cortar tráfico, manifestaciones ilegales, etc.).', '750', '5'],
+            ['Art. 2.06', 'Allanamiento de morada — Entrar en morada ajena o mantenerse en la misma contra la voluntad de su morador.', '2.500', '10'],
+            ['Art. 2.07', 'Delito de odio — Infracción penal donde la víctima se elige por su pertenencia a un grupo basado en raza, origen, religión, sexo, orientación sexual, etc. Condena temporal si reincide.', '1.000', '6'],
+            ['Art. 2.08', 'Dañar el mobiliario urbano — Causar daños al mobiliario urbano de la ciudad (farolas, semáforos, contenedores, etc.).', '350', '0'],
+            ['Art. 2.09', 'Acoso psicológico — Atentar contra la dignidad e integridad moral de otro.', '1.400', '8'],
+            ['Art. 2.10', 'Suplantación de identidad — Apropiación de la identidad de una persona para acceder a recursos u obtener beneficios.', '3.000', '10'],
+            ['Art. 2.11', 'Circular por la vía pública con el rostro oculto — Llevar bandanas, máscaras o cualquier elemento que oculte el rostro en vía pública.', '450', '0'],
+            ['Art. 2.12', 'Circular en vía pública desnudo o semidesnudo — Mostrar partes del cuerpo por ausencia de prendas.', '300', '0'],
+            ['Art. 2.13', 'Circular portando chaleco antibalas o accesorios de armas — Portar accesorios de armas o chaleco antibalas, funcional o visual.', '500', '0'],
+            ['Art. 2.14', 'Participación en carreras ilegales — Formar parte de una carrera ilegal o ser el organizador.', '900', '6'],
+            ['Art. 2.15', 'Comercialización ilegal — Venta de servicios sin los permisos necesarios del ayuntamiento.', '650', '0'],
+            ['Art. 2.16', 'Prostitución — Mantener relaciones sexuales a cambio de dinero o beneficios. Se penará igualmente a quienes contraten dichos servicios.', '850', '8'],
+            ['Art. 2.17', 'Explotación sexual — Empleando violencia, intimidación o engaño, abusando de superioridad o vulnerabilidad, para determinar a una persona a ejercer o mantenerse.', '2.500', '13'],
+            ['Art. 2.18', 'Agresión sexual — Atentar contra la libertad sexual de otra persona, utilizando violencia o intimidación.', '1.500', '10'],
+            ['Art. 2.19', 'Abusos sexuales — Sin violencia o intimidación y sin consentimiento, realizar actos contra la libertad sexual.', '850', '10'],
+            ['Art. 2.20', 'Acoso sexual — Pedir favores de naturaleza sexual provocando situación gravemente intimidatoria, hostil o humillante.', '3.000', '10'],
+            ['Art. 2.21', 'Violación — Cuando haya acceso carnal sobre la persona.', '3.000', '60'],
           ]},
         ]
       },
       {
-        id: 'delitos-muy-graves',
-        title: 'Delitos Muy Graves',
-        icon: '🔴',
-        content: [
-          { type: 'table', title: 'Delitos muy graves', headers: ['Delito', 'Descripción', 'Pena'], rows: [
-            ['Robo a banco', 'Asalto a entidades bancarias', 'Prisión federal extendida + CK potencial'],
-            ['Secuestro de autoridad', 'Secuestrar a policía/EMS de servicio', 'Prisión federal + CK potencial'],
-            ['Homicidio', 'Matar a otro personaje con rol válido', 'CK del agresor o prisión máxima'],
-            ['Terrorismo', 'Ataques masivos contra la ciudad', 'CK + permaban si aplica'],
-            ['Traición a banda', 'Según normativa de bandas', 'CK según decisión del líder']
-          ]},
-          { type: 'warning', title: 'Nota importante', text: 'Los delitos muy graves pueden derivar en CK del personaje. El CK por multas acumuladas (>20k) se aplica si no se paga en 24 horas.' }
-        ]
-      },
-      {
-        id: 'multas-ck',
-        title: 'Sistema de Multas y CK',
+        id: 'capitulo-iii',
+        title: 'Cap. III – Contra el Patrimonio y Orden Socioeconómico',
         icon: '💰',
         content: [
-          { type: 'info', title: 'Reglas', items: [
-            'Las multas se acumulan por delitos cometidos',
-            'Miembros de banda/camellos/civiles con más de 20.000$ en multas: 24h para pagar el 100%',
-            'Si no se pagan: busca y captura para CK federal',
-            'CK a policía: requiere motivos de peso + pruebas gráficas detalladas',
-            'CK a miembros de otras bandas: motivos de peso + pruebas que pongan en peligro la continuidad',
-            'CK al abandonar banda: decisión exclusiva del líder',
-            'CK a líder de banda: 85% de miembros de acuerdo + aprobación de administración'
+          { type: 'penal-table', chapterTitle: 'CAPÍTULO III – DELITOS CONTRA EL PATRIMONIO Y CONTRA EL ORDEN SOCIOECONÓMICO', headers: ['Artículo', 'Descripción', 'Importe ($)', 'Meses'], rows: [
+            ['Art. 3.01', 'Hurto — Con ánimo de lucro, coja pertenencias sin la voluntad de su dueño.', '600', '5'],
+            ['Art. 3.02', 'Asalto a mano armada — Con ánimo de lucro, apoderarse de pertenencias ajenas empleando fuerza en las cosas.', '1.000', '6'],
+            ['Art. 3.03', 'Robo de Vehículo — Sustraer o utilizar sin autorización un vehículo ajeno, sin ánimo de apropiárselo.', '860', '7'],
+            ['Art. 3.04', 'Robo de Vehículo de Importación — Sustraer o utilizar sin autorización un vehículo de importación. Incluye: Huida, dinero negro, rostro oculto.', '1.500', '10'],
+            ['Art. 3.05', 'Robo a domicilio/casa — Con ánimo de lucro, apoderarse de cosas muebles empleando violencia o intimidación.', '1.200', '10'],
+            ['Art. 3.06', 'Robo a un negocio comercial — Robar a mano armada la caja registradora de un negocio menor. Incluye: porte armas, huida, rostro oculto, secuestro, robo vehículo.', '1.500', '10'],
+            ['Art. 3.07', 'Robo a un negocio comercial con intento de homicidio — Aplicando intento de homicidio en robo y huida. Incluye: porte armas, huida, rostro oculto, secuestro, intento homicidio, robo vehículo.', '2.500', '15'],
+            ['Art. 3.08', 'Intento de robo a un negocio comercial — Intentar iniciar robo y ser pillado en flagrante delito. Incluye: porte armas, huida, secuestro, robo vehículo.', '800', '5'],
+            ['Art. 3.09', 'Cómplice de robo a un negocio comercial — Obstruir de forma interesada el operativo. Incluye: porte armas, huida, secuestro, robo vehículo.', '700', '5'],
+            ['Art. 3.10', 'Robo a un furgón blindado — Con ánimo de lucro, apoderarse empleando violencia o intimidación. Incluye: rostro oculto, portes armas, huida, secuestro, robo vehículo.', '8.000', '10'],
+            ['Art. 3.11', 'Robo a un furgón blindado con intento de homicidio — Incluye: rostro oculto, portes armas, huida, intento homicidio, secuestro, robo vehículo.', '15.000', '15'],
+            ['Art. 3.12', 'Robo a joyería — Con ánimo de lucro, apoderarse de bienes empleando violencia o intimidación. Incluye: rostro oculto, portes armas, huida, secuestro, robo vehículo.', '10.000', '15'],
+            ['Art. 3.13', 'Robo a joyería con intento de homicidio — Aplicando intento homicidio en robo y huida. Incluye: rostro oculto, portes armas, huida, intento homicidio, secuestro, robo vehículo.', '17.000', '20'],
+            ['Art. 3.14', 'Intento de robo a joyería — Pillado en flagrante delito. Incluye: rostro oculto, portes armas, huida, secuestro, robo vehículo.', '5.000', '8'],
+            ['Art. 3.15', 'Cómplice de robo a joyería — Obstruir de forma interesada el operativo. Incluye: rostro oculto, portes armas, huida, secuestro, robo vehículo.', '5.000', '8'],
+            ['Art. 3.16', 'Robo Ammu-Nación — Robo de las vitrinas. Incluye: porte armas, rostro oculto, huida, secuestro, robo vehículo.', '10.000', '15'],
+            ['Art. 3.17', 'Robo a Ammu-Nation con intento de homicidio — Aplicando intento homicidio en robo y huida. Incluye: porte armas, rostro oculto, huida, secuestro, intento homicidio, robo vehículo.', '17.000', '20'],
+            ['Art. 3.18', 'Intento de robo a Ammu-Nation — Pillado en flagrante delito. Incluye: porte armas, rostro oculto, huida, secuestro, robo vehículo.', '5.000', '8'],
+            ['Art. 3.19', 'Cómplice de robo a Ammu-Nation — Obstruir de forma interesada el operativo. Incluye: porte armas, rostro oculto, huida, secuestro, robo vehículo.', '5.000', '8'],
+            ['Art. 3.20', 'Robo a Life Invader — Asaltar el local para adquirir bienes a la fuerza o con intimidación. Incluye: porte armas, rostro oculto, huida, secuestro, robo vehículo.', '16.000', '15'],
+            ['Art. 3.21', 'Robo a Life Invader con intento de homicidio — Aplicando intento homicidio en robo y huida. Incluye: porte armas, rostro oculto, huida, secuestro, intento homicidio, robo vehículo.', '23.000', '20'],
+            ['Art. 3.22', 'Intento de robo a Life Invader — Pillado en flagrante delito. Incluye: porte armas, rostro oculto, huida, secuestro, robo vehículo.', '8.000', '6'],
+            ['Art. 3.23', 'Cómplice de robo a Life Invader — Incluye: porte armas, rostro oculto, huida, secuestro, robo vehículo.', '8.000', '6'],
+            ['Art. 3.24', 'Asalto al yate — Asaltar el yate para apoderarse de bienes y posesiones. Incluye: porte armas, rostro oculto, huida, intento homicidio, robo vehículo.', '22.000', '20'],
+            ['Art. 3.25', 'Robo a sucursal bancaria (Fleeca) — Con ánimo de lucro, empleando violencia o intimidación. Incluye: porte armas, rostro oculto, huida, secuestro, dinero negro, robo vehículo.', '18.000', '30'],
+            ['Art. 3.26', 'Robo a sucursal bancaria con intento de homicidio (Fleeca) — Aplicando intento homicidio en robo y huida. Incluye: porte armas, rostro oculto, huida, secuestro, dinero negro, intento homicidio, robo vehículo.', '25.000', '35'],
+            ['Art. 3.27', 'Intento de robo a sucursal bancaria (Fleeca) — Incluye: porte armas, rostro oculto, huida, secuestro, dinero negro, robo vehículo.', '8.000', '15'],
+            ['Art. 3.28', 'Cómplice de robo a sucursal bancaria (Fleeca) — Incluye: porte armas, rostro oculto, huida, secuestro, dinero negro, robo vehículo.', '10.000', '15'],
+            ['Art. 3.29', 'Robo a banco central — Robar la caja fuerte del Banco Central (negociación de huida). Incluye: porte armas, rostro oculto, huida, secuestro, dinero negro, robo vehículo.', '45.000', '40'],
+            ['Art. 3.30', 'Robo a banco central con intento de homicidio — Acabando en tiroteo. Incluye: porte armas, rostro oculto, huida, secuestro, dinero negro, intento homicidio funcionario, robo vehículo.', '55.000', '45'],
+            ['Art. 3.31', 'Intento de robo a banco central — Pillado en flagrante delito. Incluye: porte armas, rostro oculto, huida, secuestro, dinero negro, robo vehículo.', '25.000', '20'],
+            ['Art. 3.32', 'Cómplice de robo a banco central — Incluye: porte armas, rostro oculto, huida, secuestro, dinero negro, robo vehículo.', '30.000', '20'],
+            ['Art. 3.33', 'Asalto a un establecimiento mayor del Estado — Con ánimo de lucro, empleando violencia o intimidación. Incluye: porte armas, rostro oculto, huida, secuestro, robo vehículo.', '55.000', '45'],
+            ['Art. 3.34', 'Asalto a laboratorios Humane — Empleando violencia o intimidación. Incluye: porte armas, rostro oculto, huida, secuestro, robo vehículo.', '13.000', '10'],
+            ['Art. 3.35', 'Asalto a laboratorios Humane con intento de homicidio — Incluye: porte armas, rostro oculto, huida, secuestro, intento homicidio funcionario, robo vehículo.', '20.000', '15'],
+            ['Art. 3.36', 'Cómplice de asalto a laboratorios Humane — Incluye: porte armas, rostro oculto, huida, secuestro, intento homicidio funcionario, robo vehículo.', '8.000', '15'],
+            ['Art. 3.37', 'Intento de asalto a laboratorios Humane — Incluye: porte armas, rostro oculto, huida, secuestro, intento homicidio funcionario, robo vehículo.', '8.000', '15'],
+            ['Art. 3.38', 'Intento de asalto a un tren estatal — Se entregan de forma voluntaria. Incluye: rostro oculto, portes armas, huida, secuestro, robo vehículo.', '4.000', '5'],
+            ['Art. 3.39', 'Asalto a un tren estatal — Apoderarse de bienes empleando violencia o intimidación. Incluye: rostro oculto, portes armas, huida, secuestro, robo vehículo.', '8.000', '15'],
+            ['Art. 3.40', 'Asalto a un tren estatal con intento de homicidio — Incluye: rostro oculto, portes armas, huida, secuestro, robo vehículo.', '15.000', '20'],
+            ['Art. 3.41', 'Intento de robo a Casino — Pillado en flagrante delito. Incluye: porte armas, rostro oculto, secuestro, dinero negro, robo vehículo.', '10.000', '5'],
+            ['Art. 3.42', 'Robo a Casino — Empleando violencia o intimidación. Incluye: porte armas, rostro oculto, secuestro, huida, dinero negro, robo vehículo.', '22.500', '15'],
+            ['Art. 3.43', 'Robo a Casino con intento de homicidio — Incluye: porte armas, rostro oculto, huida, secuestro, dinero negro, intento homicidio funcionario, robo vehículo.', '30.500', '20'],
+            ['Art. 3.44', 'Cómplice de robo a Casino — Incluye: porte armas, rostro oculto, dinero negro, robo vehículo.', '30.500', '20'],
           ]},
         ]
-      }
+      },
+      {
+        id: 'capitulo-iv',
+        title: 'Cap. IV – Servicios Estatales y Autónomos',
+        icon: '🏛️',
+        content: [
+          { type: 'penal-table', chapterTitle: 'CAPÍTULO IV – DELITOS DE Y PARA LOS SERVICIOS ESTATALES Y/O AUTÓNOMOS', headers: ['Artículo', 'Descripción', 'Importe ($)', 'Meses'], rows: [
+            ['Art. 4.01', 'Estafa de un local o servicio — Con ánimo de lucro, coja pertenencias sin la voluntad de su dueño.', '5.000', '5'],
+            ['Art. 4.02', 'Negar o borrar las CCTV a la policía — Obstruir la labor policial tras un delito o sospecha.', '2.500', '5'],
+            ['Art. 4.03', 'Permitir entrada a menores de 18 años en discotecas, clubs nocturnos o salón de juegos de apuestas — Entrada de menores a establecimientos de ocio sin edad requerida.', '10.000', '0'],
+            ['Art. 4.04', 'Apropiación indebida de capitales — Con ánimo de lucro, coja pertenencias de un negocio sin la voluntad de su dueño o el estado.', '6.000', '15'],
+            ['Art. 4.05', 'Posesión de objetos/materiales sin la licencia/autorización pertinente — Estar en posesión sin la autorización correspondiente.', '3.000', '0'],
+          ]},
+        ]
+      },
+      {
+        id: 'capitulo-v',
+        title: 'Cap. V – Moneda, Timbre y Hacienda Pública',
+        icon: '🏦',
+        content: [
+          { type: 'penal-table', chapterTitle: 'CAPÍTULO V – DE LA MONEDA Y EL TIMBRE Y LOS DELITOS CONTRA LA HACIENDA PÚBLICA', headers: ['Artículo', 'Descripción', 'Importe ($)', 'Meses'], rows: [
+            ['Art. 5.01', 'Delito leve contra la Hacienda Pública — Llevar dinero en efectivo sin declarar entre 1$ y 5.000$.', '1.000', '0'],
+            ['Art. 5.02', 'Delito menos grave contra la Hacienda Pública — Llevar dinero sin declarar entre 5.001$ y 10.000$.', '3.300', '7'],
+            ['Art. 5.03', 'Delito grave contra la Hacienda Pública — Llevar dinero sin declarar entre 10.001$ y 30.000$.', '10.000', '14'],
+            ['Art. 5.04', 'Tráfico de divisas — Compraventa ilegal de divisas. Se considera tráfico poseer más de 30.001$.', '22.000', '30'],
+            ['Art. 5.05', 'Posesión de joyas ilegales — Posesión de joyas ilegales (5–80 unidades).', '2.500', '10'],
+            ['Art. 5.06', 'Venta de joyas ilegales — Posesión de joyas ilegales superior a 81 unidades.', '5.000', '20'],
+          ]},
+        ]
+      },
+      {
+        id: 'capitulo-vi',
+        title: 'Cap. VI – Porte, Tenencia y Tráfico de Armas',
+        icon: '🔫',
+        content: [
+          { type: 'penal-table', chapterTitle: 'CAPÍTULO VI – PORTE, TENENCIA Y TRÁFICO DE ARMAS U OBJETOS ILEGALES', headers: ['Artículo', 'Descripción', 'Importe ($)', 'Meses'], rows: [
+            ['Art. 6.01', 'Exhibición de un arma blanca legal en vía pública — Mostrar un arma blanca legal en vía pública.', '700', '0'],
+            ['Art. 6.02', 'Exhibición de un arma blanca ilegal en vía pública — Mostrar un arma blanca ilegal en vía pública.', '800', '0'],
+            ['Art. 6.03', 'Tenencia de arma blanca ilegal — Poseer un arma blanca que no esté a la venta en un Ammu-Nation.', '1.200', '6'],
+            ['Art. 6.04', 'Exhibición de un arma de fuego de calibre bajo en vía pública — Incluye retirada si no tiene licencia y tenencia.', '3.000', '10'],
+            ['Art. 6.05', 'Exhibición de un arma de fuego de calibre medio en vía pública — Incluye retirada y tenencia.', '10.000', '8'],
+            ['Art. 6.06', 'Exhibición de un arma de fuego de calibre alto en vía pública — Incluye retirada y tenencia.', '15.000', '8'],
+            ['Art. 6.07', 'Tenencia ilegal de arma corta de fuego — Poseer un arma corta de fuego (pistola sns).', '9.000', '9'],
+            ['Art. 6.08', 'Tenencia de arma de fuego ilegal de calibre bajo — Poseer un arma de fuego ilegal de bajo calibre.', '11.000', '13'],
+            ['Art. 6.09', 'Tenencia de arma de fuego ilegal de calibre medio — Poseer un arma de fuego ilegal de calibre medio (escopetas y subfusiles).', '16.000', '15'],
+            ['Art. 6.10', 'Tenencia de arma de fuego ilegal de calibre alto — Poseer un arma de fuego ilegal (fusiles, rifles, etc.).', '20.000', '20'],
+            ['Art. 6.11', 'Tráfico de armas — Tráfico ilegal, transporte o intento de venta ilegal de armas. Mínimo 4 armas.', '30.000', '25'],
+            ['Art. 6.12', 'Posesión de herramientas de robo — Posesión de dispositivos o herramientas para robar establecimientos o bienes.', '2.000', '7'],
+            ['Art. 6.13', 'Posesión de herramientas explosivas — Posesión de dispositivos o herramientas con explosivos.', '3.500', '10'],
+            ['Art. 6.14', 'Posesión de munición y accesorios ilegales (por unidad) — Posesión de dispositivos, accesorios o municiones de armas de fuego.', '100', '0'],
+          ]},
+        ]
+      },
+      {
+        id: 'capitulo-vii',
+        title: 'Cap. VII – Delitos contra la Salud Pública',
+        icon: '💊',
+        content: [
+          { type: 'penal-table', chapterTitle: 'CAPÍTULO VII – DELITOS CONTRA LA SALUD PÚBLICA', headers: ['Artículo', 'Descripción', 'Importe ($)', 'Meses'], rows: [
+            ['Art. 7.01', 'Tenencia de cogollos de marihuana (por unidad) — Consumo propio: 3 unidades. Entre 4 y 14 unidades. (Se multiplica la sanción por el número de bolsas(2gr))', '260', '0'],
+            ['Art. 7.02', 'Tenencia de metanfetamina (por unidad) — Entre 0 y 10 bolsas. (Se multiplica la sanción por el número de bolsas(1gr))', '350', '0'],
+            ['Art. 7.03', 'Tenencia de cocaína (por unidad) — Entre 0 y 10 bolsas. (Se multiplica la sanción por el número de bolsas(1gr))', '500', '0'],
+            ['Art. 7.04', 'Venta menor de marihuana (por unidad) — Vender o llevar 10 a 25 unidades. (Se multiplica por el número de unidades(2gr))', '260', '10'],
+            ['Art. 7.05', 'Venta menor de metanfetamina (por unidad) — Vender o llevar 10 a 25 unidades. (Se multiplica por el número de unidades(1gr))', '350', '10'],
+            ['Art. 7.06', 'Venta menor de cocaína (por unidad) — Vender o llevar 10 a 25 unidades. (Se multiplica por el número de unidades(1gr))', '500', '10'],
+            ['Art. 7.07', 'Venta mayor de estupefacientes — Vender o llevar 26 a 45 unidades de cualquier sustancia. (Sanción económica fija.)', '12.000', '20'],
+            ['Art. 7.08', 'Tráfico de drogas — Vender o llevar más de 46 unidades de cualquier sustancia. (Sanción económica fija.)', '20.000', '25'],
+            ['Art. 7.09', 'Consumo de sustancias estupefacientes en vía pública — Conlleva retirada y sanción si sobrepasa la cantidad poseída.', '800', '0'],
+          ]},
+        ]
+      },
+      {
+        id: 'capitulo-viii',
+        title: 'Cap. VIII – Contra la Integridad Física Ciudadana',
+        icon: '🗡️',
+        content: [
+          { type: 'penal-table', chapterTitle: 'CAPÍTULO VIII – DELITOS CONTRA LA INTEGRIDAD FÍSICA CIUDADANA', headers: ['Artículo', 'Descripción', 'Importe ($)', 'Meses'], rows: [
+            ['Art. 8.01', 'Intento de secuestro a civil — No realizar con éxito la acción de retener u ocultar a un civil. Incluye: Huida y robo de vehículo.', '4.500', '7'],
+            ['Art. 8.02', 'Secuestro a civil — Retener a una o varias personas contra su voluntad. Incluye: Huida y robo de vehículo.', '7.000', '9'],
+            ['Art. 8.03', 'Retención ilegal — Encierra o detiene a otro, privándole de su libertad. Indemnización: 500$ cada 5 minutos.', '1.500', '5'],
+            ['Art. 8.04', 'Delito de quebrantamiento de condena — Incumplimiento de penas de prisión, medidas de seguridad y cautelares (ej: orden de alejamiento).', '1.000', '10'],
+            ['Art. 8.05', 'Intento de homicidio primer grado — Intentar matar a otra persona de manera imprudente.', '14.000', '20'],
+            ['Art. 8.06', 'Intento de homicidio segundo grado — Intentar matar de manera no consumada. La víctima continúa con vida.', '10.000', '15'],
+            ['Art. 8.07', 'Intento de homicidio de manera imprudente — Por imprudencia causar lesiones de gravedad con posibilidad de matar. Relacionado con vehículos a motor.', '4.000', '10'],
+            ['Art. 8.08', 'Homicidio primer grado — Homicidio de una o varias personas de manera imprudente.', '17.000', '25'],
+            ['Art. 8.09', 'Homicidio segundo grado — Homicidio de una o varias personas de manera no consumada.', '13.000', '20'],
+            ['Art. 8.10', 'Homicidio tercer grado — Homicidio de una o varias personas de manera imprudente.', '10.000', '17'],
+            ['Art. 8.11', 'Asesinato — Homicidio con premeditación, alevosía, ensañamiento, concurrencia de precio o promesa.', '25.000', '30'],
+            ['Art. 8.12', 'Omisión de socorro — Observar que otra persona está en peligro y no auxiliar o solicitar ayuda.', '1.000', '5'],
+            ['Art. 8.13', 'Coacción — Fuerza o violencia física o psíquica para obligar a decir o hacer algo contra su voluntad.', '3.500', '10'],
+            ['Art. 8.14', 'Negligencia médica con resultados de lesiones — Sanitario que causa lesiones al paciente por falta de cuidado.', '2.000', '0'],
+            ['Art. 8.15', 'Negligencia médica con resultados de muerte — Sanitario que causa la muerte al paciente por falta de cuidado.', '8.000', '10'],
+          ]},
+        ]
+      },
+      {
+        id: 'capitulo-ix',
+        title: 'Cap. IX – Documentos, Identificaciones y Licencias',
+        icon: '🪪',
+        content: [
+          { type: 'penal-table', chapterTitle: 'CAPÍTULO IX – DELITOS EN DOCUMENTOS, IDENTIFICACIONES Y LICENCIA', headers: ['Artículo', 'Descripción', 'Importe ($)', 'Meses'], rows: [
+            ['Art. 9.01', 'Delito de falsificación de documento — Falsear un documento con la intención de que aparente ser real.', '3.000', '8'],
+            ['Art. 9.02', 'Posesión de documentación no renovada/válida — Poseer licencias o documentación no renovadas habiendo sido previamente avisado.', '1.000', '0'],
+            ['Art. 9.03', 'Negación del agente a enseñar el número de placa — Agente que se niega a enseñar su placa tras intervención. (+ Indemnización de 1.500$ al ciudadano)', '1.000', '0'],
+            ['Art. 9.04', 'Usurpación de funciones públicas — Ejercicio de actos propios de autoridad o funcionario, atribuyéndose carácter oficial sin condiciones para ello.', '4.000', '15'],
+            ['Art. 9.05', 'Intrusismo — Ejercicio de actividad profesional sin título o autorización necesarios.', '2.000', '10'],
+            ['Art. 9.06', 'Denuncia falsa/escasa o irrisoria — Denunciar a un agente con redacción escasa y motivo de poco peso o sin fundamento.', '1.000', '0'],
+          ]},
+        ]
+      },
+      {
+        id: 'capitulo-x',
+        title: 'Cap. X – Delitos de la Administración Pública',
+        icon: '📋',
+        content: [
+          { type: 'penal-table', chapterTitle: 'CAPÍTULO X – DELITOS DE LA ADMINISTRACIÓN PÚBLICA', headers: ['Artículo', 'Descripción', 'Importe ($)', 'Meses'], rows: [
+            ['Art. 10.01', 'Prevaricación de funcionario público — Dictar resolución arbitraria a sabiendas de su ilegalidad o nombrar sin requisitos legales.', '1.200', '10'],
+            ['Art. 10.02', 'Ingesta de drogas o alcohol de servicio — Consumir sustancias estupefacientes o alcohol durante el servicio.', '1.200', '8'],
+            ['Art. 10.03', 'Omisión del deber de perseguir delitos — Dejar intencionadamente de promover la persecución de delitos de los que se tenga noticia.', '3.000', '10'],
+            ['Art. 10.04', 'Omisión de socorro por un funcionario público — Requerido a prestar auxilio por razón de cargo y abstenerse de prestarlo.', '25.000', '10'],
+            ['Art. 10.05', 'Violación de secretos — Revelar secretos o informaciones de los que se tenga conocimiento por razón de cargo y que no deban divulgarse.', '2.500', '0'],
+            ['Art. 10.06', 'Allanamiento de domicilio — Entrar contra la voluntad del titular en domicilio, despacho u oficina fuera de horas de apertura.', '3.500', '10'],
+          ]},
+        ]
+      },
+      {
+        id: 'capitulo-xi',
+        title: 'Cap. XI – Contra la Administración de Justicia',
+        icon: '🔨',
+        content: [
+          { type: 'penal-table', chapterTitle: 'CAPÍTULO XI – DELITOS CONTRA LA ADMINISTRACIÓN DE JUSTICIA', headers: ['Artículo', 'Descripción', 'Importe ($)', 'Meses'], rows: [
+            ['Art. 11.01', 'Obstrucción a la justicia — Omitir presentarse en comisaría o colaborar con la policía cuando ha sido indicado previamente.', '700', '10'],
+            ['Art. 11.02', 'Desacato a la autoridad — Hacer caso omiso a una orden directa de un agente de la autoridad.', '1.000', '0'],
+            ['Art. 11.03', 'Huida de la justicia — Hacer caso omiso a indicaciones de agentes y proceder a persecución. Incluye: Robo de vehículo y delitos contra la seguridad vial.', '1.600', '7'],
+            ['Art. 11.04', 'Agredir o amenazar a un funcionario público — Acción violenta con intención de causar un daño.', '1.500', '5'],
+            ['Art. 11.05', 'Faltas de respeto a un funcionario público — Agredir verbalmente o menospreciar a un agente. Reincidencia: condena.', '750', '5'],
+            ['Art. 11.06', 'Asalto/robo a un funcionario público — Amenazar a un funcionario para que entregue sus pertenencias.', '4.000', '15'],
+            ['Art. 11.07', 'Violar un perímetro o cordón policial — Cruzar sin permiso un perímetro policial claramente señalizado.', '520', '0'],
+            ['Art. 11.08', 'Intento de soborno a un funcionario público — Tratar de incentivar a la corrupción por medio de bienes o suma monetaria.', '2.500', '0'],
+            ['Art. 11.09', 'Soborno a un funcionario público — Haber incentivado a la corrupción por medio de bienes o suma monetaria.', '4.000', '7'],
+            ['Art. 11.10', 'Tomar, difamar o difundir grabaciones o fotografías de un funcionario público — Grabar o tomar foto/video sin consentimiento.', '4.000', '7'],
+            ['Art. 11.11', 'Intento de secuestro a funcionario público — No realizar con éxito la acción de retener u ocultar a un funcionario.', '5.000', '15'],
+            ['Art. 11.12', 'Secuestro a funcionario público — Retener a un funcionario contra su voluntad.', '10.000', '20'],
+            ['Art. 11.13', 'Entrar en zonas de acceso a funcionarios en dependencias policiales — Acceder sin autorización a zonas limitadas y privadas de comisaría.', '1.200', '0'],
+            ['Art. 11.14', 'Entrada no autorizada a instalaciones militares — Invasión de instalación militar a pie o en vehículo.', '10.000', '26'],
+            ['Art. 11.15', 'Intento de homicidio de primer grado a un funcionario público — Intentar matar con alevosía.', '15.000', '25'],
+            ['Art. 11.16', 'Intento de homicidio de segundo grado a un funcionario público — Intentar matar de manera no consumada. La víctima continúa con vida.', '11.000', '20'],
+            ['Art. 11.17', 'Intento de homicidio de manera imprudente a un funcionario público — Por imprudencia grave causar lesiones con posibilidad de matar. Relacionado con vehículos.', '5.000', '15'],
+            ['Art. 11.18', 'Homicidio en primer grado a un funcionario público — Con premeditación y alevosía.', '20.000', '30'],
+            ['Art. 11.19', 'Homicidio en segundo grado a un funcionario público — De manera no consumada.', '16.000', '25'],
+            ['Art. 11.20', 'Homicidio en tercer grado a un funcionario público — De manera imprudente.', '13.000', '22'],
+          ]},
+        ]
+      },
+      {
+        id: 'capitulo-xii',
+        title: 'Cap. XII – Recursos Naturales y Medio Ambiente',
+        icon: '🌿',
+        content: [
+          { type: 'penal-table', chapterTitle: 'CAPÍTULO XII – DE LOS DELITOS CONTRA LOS RECURSOS NATURALES Y EL MEDIO AMBIENTE', headers: ['Artículo', 'Descripción', 'Importe ($)', 'Meses'], rows: [
+            ['Art. 12.01', 'Asesinato o caza de especies protegidas y porte de materia prima (por unidad) — Atentar contra la vida de una especie protegida (orcas, ballenas, tortugas, tiburones, etc.). (+ Incautación del material)', '300', '0'],
+            ['Art. 12.02', 'Contaminación del medioambiente — Arrojar residuos sólidos o peligrosos al dominio público no habilitado.', '5.000', '20'],
+            ['Art. 12.03', 'Provocar incendio — Provocar un incendio que comporte peligro para la vida o integridad física de las personas o cause daños en bienes.', '1.000', '11'],
+          ]},
+        ]
+      },
     ]
   }
 ];
