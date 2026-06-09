@@ -52,3 +52,22 @@ prompt
 server.log
 # Skills directory
 /skills/
+
+# Non-deploy directories
+/zscripts/
+/agent-ctx/
+/db/
+/download/
+/examples/
+/extracted_text/
+/mini-services/
+/normativas/
+/prisma/
+/upload/
+Caddyfile
+cover.html
+generate_audit.py
+start-server.sh
+bun.lock
+components.json
+worklog.md
