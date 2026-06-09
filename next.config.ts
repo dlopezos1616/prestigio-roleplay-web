@@ -5,10 +5,9 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
   reactStrictMode: false,
-  allowedDevOrigins: [
-    '.space-z.ai',
-    'localhost',
-  ],
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
